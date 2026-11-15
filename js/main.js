@@ -208,15 +208,24 @@ function initOfflineOverlay() {
   let checking = false;
   async function checkConnectivity() {
     if (!navigator.onLine) return false;
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 2000);
     try {
-      const res = await fetch('js/theme-init.js?_t=' + Date.now(), { cache: 'no-store', method: 'GET' });
+      const res = await fetch('js/theme-init.js?_t=' + Date.now(), { cache: 'no-store', method: 'GET', signal: ctrl.signal });
+      clearTimeout(timer);
       return !!res && res.ok;
     } catch (e) {
+      clearTimeout(timer);
       return false;
     }
   }
   async function update() {
     if (checking) return;
+    if (!navigator.onLine) {
+      overlay.classList.add('is-active');
+      setWingsAnimating(true);
+      return;
+    }
     checking = true;
     const online = await checkConnectivity();
     checking = false;
@@ -231,7 +240,8 @@ function initOfflineOverlay() {
   window.addEventListener('offline', update);
   window.addEventListener('online', update);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) update(); });
-  setInterval(update, 12000);
+  setInterval(update, 5000);
+  window.addEventListener('focus', update);
   update();
 }
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-v1';
+const CACHE_NAME = 'portfolio-v2';
 const PRECACHE = [
   './',
   './index.html',
@@ -48,6 +48,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  const isProbe = new URL(req.url).searchParams.has('_t');
+  if (isProbe) {
+    event.respondWith(fetch(req));
+    return;
+  }
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
