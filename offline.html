@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sin conexión — Portafolio de Marisa</title>
+  <style>
+    :root {
+      --brand-pink: #f5a6b7;
+      --brand-pink-light: #fed7e2;
+      --brand-pink-mid: #f38da3;
+      --brand-blue-light: #a1c2d9;
+      --brand-blue-muted: #6d93b3;
+      --brand-pink-rgb: 245, 166, 183;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: radial-gradient(1200px 600px at 50% 40%, #1a1b22 0%, #08080a 70%);
+      color: #fff;
+      font-family: "Montserrat", system-ui, sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .offline-inner { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
+    .offline-butterfly { width: 180px; height: 180px; filter: drop-shadow(0 0 30px rgba(245,166,183,.6)); animation: offlineFloat 2.6s ease-in-out infinite; }
+    .offline-butterfly .off-wing { transform-origin: 32px 32px; }
+    .off-wing-l { animation: wingL 0.32s ease-in-out infinite; }
+    .off-wing-r { animation: wingR 0.32s ease-in-out infinite; }
+    @keyframes wingL { 0%,100% { transform: scaleX(1); } 50% { transform: scaleX(0.18); } }
+    @keyframes wingR { 0%,100% { transform: scaleX(1); } 50% { transform: scaleX(0.18); } }
+    @keyframes offlineFloat { 0%,100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-22px) rotate(8deg); } }
+    .offline-text { font-family: "Pacifico", cursive; font-size: 1.75rem; color: var(--brand-pink-light); letter-spacing: .04em; }
+    .offline-sub { font-size: 1rem; color: rgba(255,255,255,.65); letter-spacing: .18em; text-transform: uppercase; }
+    .typed-cursor { animation: blink 1s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .offline-butterfly { animation: none; } .off-wing-l,.off-wing-r { animation: none; } }
+  </style>
+</head>
+<body>
+  <div class="offline-inner">
+    <svg class="offline-butterfly" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="offA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fed7e2"/><stop offset=".5" stop-color="#f5a6b7"/><stop offset="1" stop-color="#a1c2d9"/></linearGradient>
+        <linearGradient id="offB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d93b3"/><stop offset="1" stop-color="#f38da3"/></linearGradient>
+      </defs>
+      <g class="off-wing off-wing-l"><path d="M32 30 C18 8 2 10 6 26 C8 36 22 34 32 32 Z" fill="url(#offA)"/><path d="M32 34 C22 40 10 52 20 56 C30 60 34 46 33 37 Z" fill="url(#offB)"/></g>
+      <g class="off-wing off-wing-r"><path d="M32 30 C46 8 62 10 58 26 C56 36 42 34 32 32 Z" fill="url(#offA)"/><path d="M32 34 C42 40 54 52 44 56 C34 60 30 46 31 37 Z" fill="url(#offB)"/></g>
+      <g class="off-body"><ellipse cx="32" cy="33" rx="2.3" ry="13" fill="#fed7e2"/><path d="M31 21 C27 13 24 10 22 9" stroke="#fed7e2" stroke-width="1.4" fill="none"/><path d="M33 21 C37 13 40 10 42 9" stroke="#fed7e2" stroke-width="1.4" fill="none"/><circle cx="22" cy="9" r="1.7" fill="#fed7e2"/><circle cx="42" cy="9" r="1.7" fill="#fed7e2"/></g>
+    </svg>
+    <div class="offline-text">Sin conexión<span class="typed-cursor">|</span></div>
+    <div class="offline-sub">esperando wifi...</div>
+  </div>
+  <script>
+    window.addEventListener('online', () => location.reload());
+  </script>
+</body>
+</html>

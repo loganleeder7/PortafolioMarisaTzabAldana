@@ -205,8 +205,22 @@ function initOfflineOverlay() {
     }
   }
 
-  function update() {
-    if (!navigator.onLine) {
+  let checking = false;
+  async function checkConnectivity() {
+    if (!navigator.onLine) return false;
+    try {
+      const res = await fetch('js/theme-init.js?_t=' + Date.now(), { cache: 'no-store', method: 'GET' });
+      return !!res && res.ok;
+    } catch (e) {
+      return false;
+    }
+  }
+  async function update() {
+    if (checking) return;
+    checking = true;
+    const online = await checkConnectivity();
+    checking = false;
+    if (!online) {
       overlay.classList.add('is-active');
       setWingsAnimating(true);
     } else {
@@ -216,6 +230,8 @@ function initOfflineOverlay() {
   }
   window.addEventListener('offline', update);
   window.addEventListener('online', update);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) update(); });
+  setInterval(update, 12000);
   update();
 }
 
@@ -504,4 +520,11 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initAnimations);
 } else {
   initAnimations();
+}
+
+// --- Service Worker (offline support) ---------------------------------------
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
 }
