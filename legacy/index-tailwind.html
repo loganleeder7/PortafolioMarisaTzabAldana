@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portafolio De Marisa | Arte Digital, 3D &amp; Audiovisual</title>
+<!-- Google Fonts: Pacifico / Playfair Display / Montserrat -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Pacifico&amp;family=Shrikhand&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              pink: '#f5a6b7',
+              pinkLight: '#fed7e2',
+              pinkDark: '#d9778f',
+              bluePrimary: '#386389',
+              blueHeader: '#38648c',
+              blueLight: '#a1c2d9',
+              blueCard: '#5582a6',
+              blueMuted: '#6d93b3',
+              darkBg: '#08080a',
+              cardDark: '#121318',
+              swatch1: '#f5a6b7',
+              swatch2: '#fed7e2',
+              swatch3: '#edf0e6',
+              swatch4: '#c5dedd',
+              swatch5: '#73a4b6',
+              swatch6: '#355f88'
+            }
+          },
+          fontFamily: {
+            title: ['"Pacifico"', 'cursive'],
+            boldTitle: ['"Shrikhand"', 'display', 'sans-serif'],
+            sans: ['"Montserrat"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Layout & Scallop Borders Styles -->
+<style data-purpose="scallop-borders">
+    /* Estilo de marco ondulado (scalloped border) inspirado en los bocetos 2, 5 y 7 */
+    .scalloped-container {
+      position: relative;
+      background-color: #a1c2d9;
+      border-radius: 28px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+    }
+    
+    .scalloped-edge-side {
+      background-image: radial-gradient(circle at left, transparent 14px, #a1c2d9 15px);
+      background-size: 32px 32px;
+      background-repeat: repeat-y;
+    }
+
+    .scallop-bottom-trim {
+      height: 24px;
+      background: radial-gradient(circle at 16px 0, #a1c2d9 14px, transparent 15px);
+      background-size: 32px 24px;
+      background-repeat: repeat-x;
+    }
+
+    /* Píldoras de colores laterales del boceto */
+    .side-palette-strip {
+      position: fixed;
+      left: 0;
+      top: 40%;
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      pointer-events: none;
+    }
+    .side-palette-strip-right {
+      position: fixed;
+      right: 0;
+      top: 40%;
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      pointer-events: none;
+    }
+    .swatch-bar {
+      width: 16px;
+      height: 22px;
+      border-radius: 0 4px 4px 0;
+    }
+    .swatch-bar-right {
+      width: 16px;
+      height: 22px;
+      border-radius: 4px 0 0 4px;
+    }
+  </style>
+<style data-purpose="butterfly-animations">
+    @keyframes gentleFloat {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+      }
+      50% {
+        transform: translateY(-16px) rotate(2deg) scale(1.02);
+      }
+    }
+
+    @keyframes wingGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 15px rgba(245, 166, 183, 0.35));
+      }
+      50% {
+        filter: drop-shadow(0 0 35px rgba(245, 166, 183, 0.7));
+      }
+    }
+
+    .animate-butterfly {
+      animation: gentleFloat 6s ease-in-out infinite, wingGlow 4s ease-in-out infinite;
+      transform-origin: center center;
+    }
+
+    .floating-mini-butterfly {
+      animation: gentleFloat 4s ease-in-out infinite;
+    }
+  </style>
+<style data-purpose="wireframe-cross-effect">
+    /* Efecto clásico de boceto con cruz (X) y bisel suave de los mockups */
+    .wireframe-box {
+      position: relative;
+      background: linear-gradient(135deg, #5381a5 0%, #3e6a8e 100%);
+      border: 4px solid #ffffff;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.18), 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .wireframe-box::before,
+    .wireframe-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    .wireframe-cross::before {
+      background: linear-gradient(to top right, transparent calc(50% - 2px), rgba(255, 255, 255, 0.6) calc(50% - 1.5px), rgba(255, 255, 255, 0.6) calc(50% + 1.5px), transparent calc(50% + 2px));
+    }
+
+    .wireframe-cross::after {
+      background: linear-gradient(to bottom right, transparent calc(50% - 2px), rgba(255, 255, 255, 0.6) calc(50% - 1.5px), rgba(255, 255, 255, 0.6) calc(50% + 1.5px), transparent calc(50% + 2px));
+    }
+
+    /* Píldoras de botones de navegación y encabezados */
+    .btn-pill-pink {
+      background-color: #f5a6b7;
+      color: #ffffff;
+      border-radius: 9999px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(245, 166, 183, 0.35);
+    }
+    .btn-pill-pink:hover {
+      background-color: #f38da3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(245, 166, 183, 0.5);
+    }
+
+    .btn-pill-blue {
+      background-color: #41729f;
+      color: #ffffff;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn-pill-blue:hover {
+      background-color: #31587d;
+      transform: translateY(-2px);
+    }
+
+    /* Modal Backdrop Blur */
+    .modal-backdrop-blur {
+      backdrop-filter: blur(8px);
+      background-color: rgba(5, 7, 10, 0.85);
+    }
+  </style>
+<!-- END: Custom Layout & Scallop Borders Styles -->
+</head>
+<body class="bg-brand-darkBg text-white font-sans antialiased selection:bg-brand-pink selection:text-white relative overflow-x-hidden">
+<!-- BEGIN: Decorative Palette Swatches (Fiel a los wireframes laterales) -->
+<aside aria-hidden="true" class="side-palette-strip hidden lg:flex">
+<div class="swatch-bar bg-brand-swatch1"></div>
+<div class="swatch-bar bg-brand-swatch2"></div>
+<div class="swatch-bar bg-brand-swatch3"></div>
+<div class="swatch-bar bg-brand-swatch4"></div>
+<div class="swatch-bar bg-brand-swatch5"></div>
+<div class="swatch-bar bg-brand-swatch6"></div>
+</aside>
+<aside aria-hidden="true" class="side-palette-strip-right hidden lg:flex">
+<div class="swatch-bar-right bg-brand-swatch1"></div>
+<div class="swatch-bar-right bg-brand-swatch2"></div>
+<div class="swatch-bar-right bg-brand-swatch3"></div>
+<div class="swatch-bar-right bg-brand-swatch4"></div>
+<div class="swatch-bar-right bg-brand-swatch5"></div>
+<div class="swatch-bar-right bg-brand-swatch6"></div>
+</aside>
+<!-- END: Decorative Palette Swatches -->
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-brand-blueHeader/95 backdrop-blur-md border-b-4 border-[#76a1c1] shadow-lg" data-purpose="main-navigation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16 md:h-20">
+<!-- Mobile Logo / Title -->
+<a class="text-white text-xl md:hidden font-title tracking-wide hover:text-brand-pinkLight transition" href="#hero">
+          Marisa
+        </a>
+<!-- Desktop Navigation Items -->
+<nav class="hidden md:flex items-center justify-between w-full font-medium text-sm lg:text-base space-x-1 lg:space-x-4">
+<a class="text-white/90 hover:text-white px-3 py-2 rounded-full hover:bg-white/10 transition-colors" href="#contacto">
+            Contacto
+          </a>
+<a class="text-white/90 hover:text-white px-3 py-2 rounded-full hover:bg-white/10 transition-colors" href="#audiovisual">
+            Publicidad Audiovisual
+          </a>
+<a class="text-white/90 hover:text-white px-3 py-2 rounded-full hover:bg-white/10 transition-colors" href="#tradicional">
+            Arte tradicional
+          </a>
+<a class="text-white/90 hover:text-white px-3 py-2 rounded-full hover:bg-white/10 transition-colors" href="#digital2d">
+            Arte 2D Digital
+          </a>
+<a class="text-white/90 hover:text-white px-3 py-2 rounded-full hover:bg-white/10 transition-colors" href="#art3d">
+            3D
+          </a>
+<a class="text-white/90 hover:text-white px-3 py-2 rounded-full hover:bg-white/10 transition-colors" href="#sobre-mi">
+            Sobre Mí
+          </a>
+<!-- Main Home Button Pill (Representativa de la píldora rosada de los bocetos) -->
+<a class="btn-pill-pink px-6 py-2.5 text-sm lg:text-base inline-flex items-center gap-2 tracking-wide font-bold" href="#hero">
+<i class="fa-solid fa-house text-xs"></i>
+            Home Page
+          </a>
+</nav>
+<!-- Mobile Menu Toggle Button -->
+<div class="md:hidden flex items-center">
+<button aria-label="Abrir Menú" class="text-white hover:text-brand-pink focus:outline-none p-2 rounded-lg bg-white/10" id="mobileMenuBtn">
+<i class="fa-solid fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Nav Dropdown -->
+<div class="hidden md:hidden bg-brand-blueHeader border-t border-brand-blueLight/30 px-4 pt-3 pb-6 space-y-2" id="mobileMenu">
+<a class="block w-full text-center btn-pill-pink py-2.5 mb-2" href="#hero">Home Page</a>
+<a class="block text-white hover:text-brand-pink py-2 px-3 rounded-lg hover:bg-white/5" href="#sobre-mi">Sobre Mí</a>
+<a class="block text-white hover:text-brand-pink py-2 px-3 rounded-lg hover:bg-white/5" href="#art3d">3D</a>
+<a class="block text-white hover:text-brand-pink py-2 px-3 rounded-lg hover:bg-white/5" href="#digital2d">Arte 2D Digital</a>
+<a class="block text-white hover:text-brand-pink py-2 px-3 rounded-lg hover:bg-white/5" href="#tradicional">Arte tradicional</a>
+<a class="block text-white hover:text-brand-pink py-2 px-3 rounded-lg hover:bg-white/5" href="#audiovisual">Publicidad Audiovisual</a>
+<a class="block text-white hover:text-brand-pink py-2 px-3 rounded-lg hover:bg-white/5" href="#contacto">Contacto</a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="pt-20">
+<!-- BEGIN: HeroSection (Imagen 1 / Wireframe 1) -->
+<section class="min-h-[92vh] flex items-center justify-center relative bg-brand-darkBg px-4 py-12 overflow-hidden" data-purpose="hero-section" id="hero">
+<!-- Ambient Glow Behind Butterfly -->
+<div class="absolute right-1/4 top-1/3 w-96 h-96 bg-brand-pink/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<!-- Left: Huge Stylized Typographic Branding -->
+<div class="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start justify-center pl-0 lg:pl-10">
+<h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-[105px] font-title text-brand-pink tracking-tight leading-none drop-shadow-[0_4px_16px_rgba(245,166,183,0.3)] select-none">
+            Portafolio
+          </h1>
+<p class="mt-6 text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-widest pl-2">
+            De Marisa
+          </p>
+<p class="text-gray-400 mt-4 max-w-lg text-base md:text-lg leading-relaxed font-light">
+            Artista Digital, Animadora 3D y Diseñadora Audiovisual. Creando universos visuales, personajes y conceptos interactivos.
+          </p>
+<div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+<a class="btn-pill-pink px-7 py-3 text-base flex items-center gap-2" href="#digital2d">
+<i class="fa-solid fa-palette"></i> Explorar Trabajos
+            </a>
+<a class="btn-pill-blue px-7 py-3 text-base flex items-center gap-2 bg-[#2d5275] hover:bg-[#203c57]" href="#contacto">
+<i class="fa-regular fa-paper-plane"></i> Contactarme
+            </a>
+</div>
+</div>
+<!-- Right: Elegant Vector Butterfly with Gentle Floating Animation -->
+<div class="lg:col-span-5 flex justify-center items-center relative">
+<div class="relative w-72 sm:w-96 md:w-[440px] animate-butterfly">
+<svg class="w-full h-auto drop-shadow-2xl" fill="none" viewbox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<!-- Butterfly Upper Wing -->
+<path d="M220 250 C 230 180, 290 80, 420 70 C 470 66, 485 110, 440 160 C 400 205, 430 250, 395 300 C 370 335, 300 300, 240 260 Z" fill="#f5a6b7" fill-opacity="0.95"></path>
+<!-- Wing Inner Patterns / Glow details -->
+<path d="M260 230 C 290 160, 340 110, 420 100 C 390 150, 370 200, 320 230 Z" fill="#fed7e2" fill-opacity="0.75"></path>
+<circle cx="410" cy="190" fill="#ffffff" fill-opacity="0.8" r="14"></circle>
+<circle cx="390" cy="225" fill="#ffffff" fill-opacity="0.8" r="9"></circle>
+<circle cx="360" cy="255" fill="#ffffff" fill-opacity="0.7" r="7"></circle>
+<!-- Lower Wing -->
+<path d="M230 260 C 280 290, 370 350, 350 420 C 330 480, 280 430, 270 380 C 260 340, 230 310, 225 270 Z" fill="#f38da3" fill-opacity="0.92"></path>
+<path d="M245 285 C 280 320, 330 370, 315 410 C 295 380, 270 340, 245 285 Z" fill="#fed7e2" fill-opacity="0.6"></path>
+<!-- Butterfly Body & Antennae -->
+<path d="M220 230 C 223 200, 215 170, 205 160 C 202 156, 195 160, 198 168 C 205 185, 210 210, 212 235 C 208 260, 210 300, 225 350 C 228 355, 234 350, 232 342 C 225 310, 222 270, 220 230 Z" fill="#ffffff"></path>
+<path d="M210 170 Q 195 140 185 135" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="3"></path>
+<path d="M213 165 Q 215 135 225 125" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: SobreMiSection (Imagen 2 / Wireframe 2) -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBg" data-purpose="about-me-section" id="sobre-mi">
+<div class="max-w-6xl mx-auto">
+<!-- Scalloped Card Wrapper -->
+<div class="scalloped-container p-6 sm:p-10 lg:p-14 text-slate-900">
+<!-- Section Title with Underline -->
+<div class="text-center mb-10">
+<h2 class="text-4xl sm:text-5xl font-extrabold text-brand-pink drop-shadow-sm tracking-wide">
+              Sobre Mí
+            </h2>
+<div class="w-56 h-1 bg-black mx-auto mt-3 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Column: Photo Frame with Side Badges & CV Download -->
+<div class="lg:col-span-5 flex flex-col items-center">
+<div class="flex items-center justify-center gap-3 w-full max-w-sm">
+<!-- Side Thumbnail / Category Indicators (boceto imagen 2) -->
+<div class="flex flex-col gap-3">
+<div class="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-brand-bluePrimary font-bold text-xs">
+<i class="fa-solid fa-camera"></i>
+</div>
+<div class="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-brand-bluePrimary font-bold text-xs">
+<i class="fa-solid fa-paint-brush"></i>
+</div>
+<div class="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-brand-bluePrimary font-bold text-xs">
+<i class="fa-solid fa-cube"></i>
+</div>
+<div class="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-brand-bluePrimary font-bold text-xs">
+<i class="fa-solid fa-film"></i>
+</div>
+<div class="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-brand-bluePrimary font-bold text-xs">
+<i class="fa-solid fa-feather"></i>
+</div>
+</div>
+<!-- Main Photo Box -->
+<div class="relative w-64 h-72 sm:w-72 sm:h-80 bg-brand-blueCard p-3 rounded-xl shadow-xl flex-1">
+<div class="w-full h-full bg-[#0a0d14] rounded-lg flex flex-col items-center justify-center p-4 text-center border border-white/20">
+<div class="w-24 h-24 rounded-full bg-brand-bluePrimary/40 border-2 border-brand-pink flex items-center justify-center mb-3 text-brand-pink text-3xl">
+<i class="fa-solid fa-user-astronaut"></i>
+</div>
+<span class="text-white font-bold text-2xl tracking-widest uppercase">FOTO</span>
+<span class="text-xs text-brand-pinkLight mt-1">Marisa • Visual Artist</span>
+</div>
+</div>
+</div>
+<!-- CV Download Button Pill -->
+<div class="mt-6">
+<a class="btn-pill-pink px-8 py-2.5 text-sm font-bold shadow-md hover:scale-105 inline-flex items-center gap-2" href="assets/docs/cv.pdf" target="_blank" rel="noopener">
+<i class="fa-solid fa-file-arrow-down"></i>
+                  CV (pdf)
+                </a>
+</div>
+</div>
+<!-- Right Column: Bio Narrative & Software Skills -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+<!-- Biography -->
+<div class="bg-white/40 p-6 rounded-2xl backdrop-blur-sm border border-white/40 shadow-sm text-slate-800">
+<p class="text-base sm:text-lg leading-relaxed font-medium">
+                  ¡Hola! Soy Marisa, apasionada del arte digital, el modelado 3D y la narrativa audiovisual. Me especializo en dar vida a conceptos e ideas a través de ilustraciones expresivas, modelado de personajes y assets para videojuegos y producción publicitaria.
+                </p>
+<p class="text-sm sm:text-base mt-3 text-slate-700 leading-relaxed">
+                  Con sólida formación técnica y artística, combino el rigor del arte tradicional con las herramientas contemporáneas de la industria para crear experiencias memorables e identidades visuales únicas.
+                </p>
+</div>
+<!-- Software Skills List -->
+<div class="bg-white/60 p-6 rounded-2xl border border-white/60 shadow-sm">
+<h3 class="text-xl font-bold text-brand-bluePrimary flex items-center gap-2 mb-4">
+<span class="w-3.5 h-3.5 rounded-full bg-brand-pink inline-block"></span>
+                  Software - Skills
+                </h3>
+<div class="space-y-3 font-semibold text-slate-800 text-sm sm:text-base">
+<!-- Skill 1 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="flex items-center gap-2"><i class="fa-brands fa-adobe text-red-600"></i> Adobe Photoshop / Procreate (Ilustración &amp; Concept Art)</span>
+<div class="w-full sm:w-36 bg-gray-200 h-2.5 rounded-full overflow-hidden">
+<div class="bg-brand-bluePrimary h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="flex items-center gap-2"><i class="fa-solid fa-cube text-orange-500"></i> Autodesk Maya / Blender (Modelado, UVs &amp; Rigging)</span>
+<div class="w-full sm:w-36 bg-gray-200 h-2.5 rounded-full overflow-hidden">
+<div class="bg-brand-bluePrimary h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-purple-600"></i> ZBrush (Escultura Digital de Criaturas &amp; Props)</span>
+<div class="w-full sm:w-36 bg-gray-200 h-2.5 rounded-full overflow-hidden">
+<div class="bg-brand-bluePrimary h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="flex items-center gap-2"><i class="fa-solid fa-clapperboard text-blue-600"></i> Adobe After Effects &amp; Premiere (Motion &amp; Edición)</span>
+<div class="w-full sm:w-36 bg-gray-200 h-2.5 rounded-full overflow-hidden">
+<div class="bg-brand-bluePrimary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="flex items-center gap-2"><i class="fa-solid fa-paintbrush text-amber-600"></i> Substance 3D Painter (Texturizado PBR)</span>
+<div class="w-full sm:w-36 bg-gray-200 h-2.5 rounded-full overflow-hidden">
+<div class="bg-brand-bluePrimary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Skill 6 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="flex items-center gap-2"><i class="fa-solid fa-palette text-emerald-600"></i> Arte Tradicional (Óleo, Acuarela, Tinta china)</span>
+<div class="w-full sm:w-36 bg-gray-200 h-2.5 rounded-full overflow-hidden">
+<div class="bg-brand-bluePrimary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SobreMiSection -->
+<!-- BEGIN: 3DSection (Imagen 3 / Wireframe 3) -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBg border-t border-white/5" data-purpose="3d-portfolio" id="art3d">
+<div class="max-w-7xl mx-auto">
+<!-- Header Wireframe Banner as seen in Mockup 3 -->
+<div class="wireframe-box wireframe-cross p-8 sm:p-14 text-center mb-12">
+<div class="relative z-10">
+<h2 class="text-5xl sm:text-7xl font-boldTitle tracking-wide text-black drop-shadow-sm">
+              3D
+            </h2>
+<div class="w-40 h-1.5 bg-black mx-auto mt-2"></div>
+<p class="text-white text-sm sm:text-base font-semibold mt-3 tracking-widest uppercase">
+              FOTO • Portafolio Tridimensional
+            </p>
+</div>
+</div>
+<!-- 3 Quick Filter/Category Cards (Boceto superior) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<a class="wireframe-box wireframe-cross p-6 text-center transform transition hover:scale-105 block group" href="#modelado-3d">
+<span class="text-white/80 font-bold text-xs tracking-wider block mb-2 uppercase">FOTO</span>
+<div class="h-24 flex items-center justify-center">
+<i class="fa-solid fa-shapes text-4xl text-white group-hover:text-brand-pinkLight transition"></i>
+</div>
+<h3 class="text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
+              Modelado 3D
+            </h3>
+</a>
+<a class="wireframe-box wireframe-cross p-6 text-center transform transition hover:scale-105 block group" href="#animacion-3d">
+<span class="text-white/80 font-bold text-xs tracking-wider block mb-2 uppercase">FOTO</span>
+<div class="h-24 flex items-center justify-center">
+<i class="fa-solid fa-person-running text-4xl text-white group-hover:text-brand-pinkLight transition"></i>
+</div>
+<h3 class="text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
+              Animación 3D
+            </h3>
+</a>
+<a class="wireframe-box wireframe-cross p-6 text-center transform transition hover:scale-105 block group" href="#iluminacion-render">
+<span class="text-white/80 font-bold text-xs tracking-wider block mb-2 uppercase">FOTO</span>
+<div class="h-24 flex items-center justify-center">
+<i class="fa-solid fa-lightbulb text-4xl text-white group-hover:text-brand-pinkLight transition"></i>
+</div>
+<h3 class="text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
+              Iluminación y Render
+            </h3>
+</a>
+</div>
+<!-- Subsección 1: MODELADO 3D -->
+<div class="mb-20" id="modelado-3d">
+<div class="inline-block bg-brand-pink text-slate-900 font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-lg sm:text-xl mb-6 shadow">
+            Modelado 3D
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Personaje Sci-Fi: Androide Cyberpunk &amp; Topología Low-Poly</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
+<div class="lg:col-span-8">
+<div class="wireframe-box wireframe-cross h-80 sm:h-96 flex flex-col items-center justify-center cursor-pointer group" onclick="openArtModal('Modelado 3D: Androide Sci-Fi', 'Malla poligonal y escultura digital optimizada para motores de videojuegos en tiempo real (Unreal Engine 5).', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white/90 text-2xl font-bold tracking-widest uppercase">FOTO / MESH PREVIEW</span>
+<span class="text-xs text-white/70 mt-2 bg-black/40 px-3 py-1 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Clic para ampliar detalles</span>
+</div>
+</div>
+<div class="lg:col-span-4 bg-brand-cardDark p-6 rounded-2xl border border-white/10">
+<h4 class="text-brand-pink font-bold text-lg mb-2">Especificaciones de Modelado</h4>
+<p class="text-gray-300 text-sm leading-relaxed mb-4">
+                Desarrollo integral de personaje desde el sculpt en ZBrush, retopología limpia en Maya y generación de mapas normales 4K.
+              </p>
+<ul class="text-xs space-y-2 text-gray-400">
+<li><strong class="text-white">Polígonos:</strong> 34,500 Quads</li>
+<li><strong class="text-white">UVs:</strong> 2 UDIM sets 4096px</li>
+<li><strong class="text-white">Pipeline:</strong> ZBrush, Maya, Marmoset</li>
+</ul>
+</div>
+</div>
+<!-- Secondary Thumbnails Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="wireframe-box wireframe-cross h-44 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Asset Prop: Cofre Medieval', 'Props de utilería para videojuego con mapas de textura PBR completos.', 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 1</span>
+</div>
+<div class="wireframe-box wireframe-cross h-44 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Boceto de Criatura 3D', 'Estudio anatómico y escultura de criatura fantástica.', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 2</span>
+</div>
+<div class="wireframe-box wireframe-cross h-44 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Vehículo Retro-Futurista', 'Hard surface modeling con acabados metálicos y desgaste.', 'https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 3</span>
+</div>
+</div>
+</div>
+<!-- Subsección 2: ANIMACIÓN 3D (Video Showcase) -->
+<div class="mb-20" id="animacion-3d">
+<div class="inline-block bg-brand-pink text-slate-900 font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-lg sm:text-xl mb-6 shadow">
+            Animación 3D
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Showreel de Animación de Personajes y Cinemática</span>
+</div>
+<!-- Video / Big Frame Wireframe Box -->
+<div class="wireframe-box wireframe-cross h-96 sm:h-[480px] flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+<div class="w-20 h-20 rounded-full bg-brand-pink/90 text-slate-900 flex items-center justify-center text-3xl shadow-2xl transition transform group-hover:scale-110 cursor-pointer">
+<i class="fa-solid fa-play ml-1"></i>
+</div>
+<span class="text-white font-extrabold text-3xl tracking-widest uppercase mt-4">VIDEO SHOWREEL</span>
+<p class="text-white/80 text-sm max-w-md mt-2">
+              Ciclos de caminata, expresiones faciales y dinámicas de combate animadas en Maya con rig profesional.
+            </p>
+</div>
+</div>
+<!-- Subsección 3: ILUMINACIÓN Y RENDER -->
+<div id="iluminacion-render">
+<div class="inline-block bg-brand-pink text-slate-900 font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-lg sm:text-xl mb-6 shadow">
+            Iluminación y Render
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Composición de Escena Nocturna &amp; Shading Fotorrealista</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
+<div class="lg:col-span-8">
+<div class="wireframe-box wireframe-cross h-80 sm:h-96 flex flex-col items-center justify-center cursor-pointer" onclick="openArtModal('Iluminación de Escena: Cyber Alley', 'Configuración de 3 puntos de luz, volumetría de niebla y materiales emissive en Arnold Renderer.', 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white/90 text-2xl font-bold tracking-widest uppercase">FOTO RENDER COMPLETO</span>
+<span class="text-xs text-white/70 mt-2 bg-black/40 px-3 py-1 rounded-full"><i class="fa-solid fa-expand mr-1"></i> Ver Render en HD</span>
+</div>
+</div>
+<div class="lg:col-span-4 bg-brand-cardDark p-6 rounded-2xl border border-white/10">
+<h4 class="text-brand-pink font-bold text-lg mb-2">Desglose de Iluminación</h4>
+<p class="text-gray-300 text-sm leading-relaxed mb-4">
+                Estudio de balances cromáticos cálidos vs. fríos utilizando Arnold Renderer con pases de Ambient Occlusion, Specular y Z-Depth para posproducción en Nuke.
+              </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-brand-bluePrimary/30 text-brand-pinkLight text-xs px-3 py-1 rounded-full border border-brand-pinkLight/30">Arnold</span>
+<span class="bg-brand-bluePrimary/30 text-brand-pinkLight text-xs px-3 py-1 rounded-full border border-brand-pinkLight/30">ACEScg Color</span>
+<span class="bg-brand-bluePrimary/30 text-brand-pinkLight text-xs px-3 py-1 rounded-full border border-brand-pinkLight/30">HDRI 32-bit</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="wireframe-box wireframe-cross h-44 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Render de Estudio: Botella de Perfume', 'Manejo de refracción en vidrio y dispersión subsuperficial.', 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO ESTUDIO</span>
+</div>
+<div class="wireframe-box wireframe-cross h-44 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Interior Isométrico Minimalista', 'Render con iluminación natural directa y sombras suaves.', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO ISOMÉTRICO</span>
+</div>
+<div class="wireframe-box wireframe-cross h-44 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Lookdev Automotriz', 'Pintura multicapa con clearcoat y reflejos especulares controlados.', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO LOOKDEV</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: 3DSection -->
+<!-- BEGIN: Arte2DDigitalSection (Imagen 4 / Wireframe 4) -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBg border-t border-white/5" data-purpose="arte-2d-digital" id="digital2d">
+<div class="max-w-7xl mx-auto">
+<!-- Top Wireframe Header as in Mockup 4 -->
+<div class="wireframe-box wireframe-cross p-8 sm:p-14 text-center mb-12">
+<div class="relative z-10">
+<h2 class="text-4xl sm:text-6xl font-boldTitle tracking-wide text-black drop-shadow-sm">
+              ARTE 2D DIGITAL
+            </h2>
+<div class="w-48 h-1.5 bg-black mx-auto mt-2"></div>
+<p class="text-white text-sm sm:text-base font-semibold mt-3 tracking-widest uppercase">
+              FOTO • Ilustración Conceptual &amp; Matte Painting
+            </p>
+</div>
+</div>
+<!-- 3 Category Buttons Pills -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<div class="wireframe-box wireframe-cross p-6 text-center cursor-pointer group hover:scale-105 transition" onclick="document.getElementById('ilustracion-escenarios').scrollIntoView({behavior:'smooth'})">
+<span class="text-white/80 font-bold text-xs tracking-wider block mb-2 uppercase">FOTO</span>
+<div class="h-20 flex items-center justify-center">
+<i class="fa-solid fa-mountain-sun text-4xl text-white group-hover:text-brand-pink transition"></i>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-wider text-white">
+              Ilustración Escenarios
+            </h3>
+</div>
+<div class="wireframe-box wireframe-cross p-6 text-center cursor-pointer group hover:scale-105 transition" onclick="document.getElementById('ilustracion-props').scrollIntoView({behavior:'smooth'})">
+<span class="text-white/80 font-bold text-xs tracking-wider block mb-2 uppercase">FOTO</span>
+<div class="h-20 flex items-center justify-center">
+<i class="fa-solid fa-shield-halved text-4xl text-white group-hover:text-brand-pink transition"></i>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-wider text-white">
+              Ilustraciones Props
+            </h3>
+</div>
+<div class="wireframe-box wireframe-cross p-6 text-center cursor-pointer group hover:scale-105 transition" onclick="document.getElementById('ilustracion-personajes-2d').scrollIntoView({behavior:'smooth'})">
+<span class="text-white/80 font-bold text-xs tracking-wider block mb-2 uppercase">FOTO</span>
+<div class="h-20 flex items-center justify-center">
+<i class="fa-solid fa-user-ninja text-4xl text-white group-hover:text-brand-pink transition"></i>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-wider text-white">
+              Ilustración Personajes
+            </h3>
+</div>
+</div>
+<!-- 1. Escenarios -->
+<div class="mb-20" id="ilustracion-escenarios">
+<div class="inline-block bg-brand-blueCard text-white font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-lg sm:text-xl mb-6 shadow">
+            Ilustración Escenarios
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Proceso de Creación (Speedpaint &amp; Matte Painting)</span>
+</div>
+<!-- Large Video Box -->
+<div class="wireframe-box wireframe-cross h-80 sm:h-[420px] flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group mb-4">
+<div class="w-20 h-20 rounded-full bg-brand-pink text-slate-900 flex items-center justify-center text-3xl shadow-xl transition transform group-hover:scale-110 cursor-pointer">
+<i class="fa-solid fa-play ml-1"></i>
+</div>
+<span class="text-white font-extrabold text-2xl tracking-widest uppercase mt-4">VIDEO DEL PROCESO</span>
+<p class="text-white/80 text-xs sm:text-sm max-w-md mt-1">
+              Time-lapse completo de 0 a 100 pintado digitalmente en Photoshop con pinceles texturizados personalizados.
+            </p>
+</div>
+</div>
+<!-- 2. Props Grid -->
+<div class="mb-20" id="ilustracion-props">
+<div class="inline-block bg-brand-blueCard text-white font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-lg sm:text-xl mb-6 shadow">
+            Ilustración Props
+          </div>
+<!-- 6 Props Boxes as seen in Wireframe 4 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<!-- Prop 1 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs text-brand-pinkLight font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-pink"></span> Armas Místicas
+              </div>
+<div class="wireframe-box wireframe-cross h-52 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Espada de Cristal Élfica', 'Diseño de arma mágica con incrustaciones luminosas para RPG.', 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 1</span>
+</div>
+</div>
+<!-- Prop 2 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs text-brand-pinkLight font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-pink"></span> Pociones Alquímicas
+              </div>
+<div class="wireframe-box wireframe-cross h-52 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Frascos de Alquimia', 'Estudio de cristalería, líquidos viscosos y burbujas de energía.', 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 2</span>
+</div>
+</div>
+<!-- Prop 3 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs text-brand-pinkLight font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-pink"></span> Grimorio Arcano
+              </div>
+<div class="wireframe-box wireframe-cross h-52 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Grimorio de Hechizos', 'Texturas de cuero envejecido, grabados de oro y runas incandescentes.', 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 3</span>
+</div>
+</div>
+<!-- Prop 4 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs text-brand-pinkLight font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-pink"></span> Máscaras Tribales
+              </div>
+<div class="wireframe-box wireframe-cross h-52 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Máscara Chamánica', 'Madera tallada, plumas y pigmentos naturales de civilizaciones antiguas.', 'https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 4</span>
+</div>
+</div>
+<!-- Prop 5 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs text-brand-pinkLight font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-pink"></span> Dispositivo Steampunk
+              </div>
+<div class="wireframe-box wireframe-cross h-52 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Brújula Aérea Steampunk', 'Engranajes de bronce, manómetros y cristales calibrados.', 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 5</span>
+</div>
+</div>
+<!-- Prop 6 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs text-brand-pinkLight font-medium">
+<span class="w-2 h-2 rounded-full bg-brand-pink"></span> Cristal de Poder
+              </div>
+<div class="wireframe-box wireframe-cross h-52 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Núcleo de Maná', 'Gema flotante con destellos de partículas y gradientes saturados.', 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
+<span class="text-white font-bold text-sm tracking-widest uppercase">FOTO PROP 6</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Personajes 2D (Gran Ilustración) -->
+<div id="ilustracion-personajes-2d">
+<div class="inline-block bg-brand-blueCard text-white font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-lg sm:text-xl mb-6 shadow">
+            Ilustraciones Personajes
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Splash Art Principal: Guardiana de los Bosques Olvidados</span>
+</div>
+<div class="wireframe-box wireframe-cross h-96 sm:h-[500px] flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Guardiana Celestial 2D', 'Ilustración clave de portada terminada con técnica de renderizado suave, iluminación ambiental y detalles botánicos.', 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&amp;fit=crop&amp;w=1400&amp;q=80')">
+<span class="text-white font-extrabold text-3xl tracking-widest uppercase">FOTO COMPLETA (SPLASH ART)</span>
+<span class="text-xs text-white/80 mt-2 bg-black/50 px-4 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1"></i> Clic para ver en pantalla completa</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Arte2DDigitalSection -->
+<!-- BEGIN: ArteTradicionalSection (Imagen 7 / Wireframe 5.jpg) -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBg border-t border-white/5" data-purpose="arte-tradicional" id="tradicional">
+<div class="max-w-7xl mx-auto">
+<!-- Header wireframe box with Black banner and Pink Text (boceto imagen 7) -->
+<div class="wireframe-box wireframe-cross p-8 sm:p-14 text-center mb-12">
+<div class="bg-black/95 max-w-xl mx-auto py-6 px-8 rounded-2xl border-2 border-brand-pink shadow-2xl relative z-10">
+<h2 class="text-4xl sm:text-5xl font-boldTitle text-brand-pink tracking-wide">
+              ARTE TRADICIONAL
+            </h2>
+<div class="w-36 h-1 bg-brand-pink mx-auto mt-2 rounded-full"></div>
+<p class="text-gray-300 text-xs sm:text-sm mt-3 tracking-wider">
+              Ilustraciones generales • Óleos, Acuarelas &amp; Tinta
+            </p>
+</div>
+</div>
+<!-- 2 Filter Buttons with Cute Butterflies on Sides -->
+<div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mb-16">
+<div class="flex items-center gap-3">
+<span class="text-2xl text-brand-pink floating-mini-butterfly"><i class="fa-solid fa-dove"></i></span>
+<button class="btn-pill-blue px-7 py-3 text-base uppercase font-bold tracking-wider">
+              Ilustraciones de Personajes
+            </button>
+</div>
+<div class="flex items-center gap-3">
+<button class="btn-pill-blue px-7 py-3 text-base uppercase font-bold tracking-wider">
+              Ilustraciones de Props
+            </button>
+<span class="text-2xl text-brand-pink floating-mini-butterfly"><i class="fa-solid fa-dove"></i></span>
+</div>
+</div>
+<!-- Subsección: Ilustraciones de Personajes Tradicionales -->
+<div class="mb-16">
+<div class="inline-block bg-brand-pink text-slate-900 font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-base sm:text-lg mb-6 shadow">
+            Ilustraciones de Personajes
+          </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Box 1 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-brand-pinkLight font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-pink"></span> Retrato al Óleo: Mirada Serena
+              </div>
+<div class="wireframe-box wireframe-cross h-80 sm:h-96 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Retrato al Óleo sobre Lienzo', 'Técnica tradicional de pintura por capas, veladuras y uso expresivo de la espátula.', 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white font-bold text-2xl tracking-widest uppercase">FOTO</span>
+</div>
+</div>
+<!-- Box 2 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-brand-pinkLight font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-pink"></span> Figura Humana en Carboncillo
+              </div>
+<div class="wireframe-box wireframe-cross h-80 sm:h-96 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Estudio Anatómico con Carboncillo', 'Dibujo del natural con énfasis en luces cenitales y sombreado con esfumino.', 'https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white font-bold text-2xl tracking-widest uppercase">FOTO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subsección: Ilustraciones de Props Tradicionales -->
+<div>
+<div class="inline-block bg-brand-pink text-slate-900 font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-base sm:text-lg mb-6 shadow">
+            Ilustraciones de Props
+          </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Box 1 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-brand-pinkLight font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-pink"></span> Botánica en Acuarela
+              </div>
+<div class="wireframe-box wireframe-cross h-80 sm:h-96 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Colección Botánica en Acuarela', 'Pigmentos finos sobre papel de algodón 300g con técnica húmedo sobre húmedo.', 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white font-bold text-2xl tracking-widest uppercase">FOTO</span>
+</div>
+</div>
+<!-- Box 2 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-brand-pinkLight font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-pink"></span> Relicario Antiguo a Tinta
+              </div>
+<div class="wireframe-box wireframe-cross h-80 sm:h-96 flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Grabado a Plumilla y Tinta China', 'Tramas cruzadas y aguadas para dar profundidad a artefactos medievales.', 'https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white font-bold text-2xl tracking-widest uppercase">FOTO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ArteTradicionalSection -->
+<!-- BEGIN: PublicidadAudiovisualSection (Imagen 6 / Wireframe 6.jpg) -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBg border-t border-white/5" data-purpose="publicidad-audiovisual" id="audiovisual">
+<div class="max-w-7xl mx-auto">
+<!-- Header Banner with Black Badge and Title -->
+<div class="wireframe-box wireframe-cross p-8 sm:p-14 text-center mb-12">
+<div class="bg-black/95 max-w-2xl mx-auto py-6 px-8 rounded-2xl border-2 border-brand-pink shadow-2xl relative z-10">
+<h2 class="text-3xl sm:text-5xl font-boldTitle text-brand-pink tracking-wide leading-tight">
+              PUBLICIDAD AUDIOVISUAL
+            </h2>
+<div class="w-48 h-1 bg-brand-pink mx-auto mt-2 rounded-full"></div>
+<p class="text-gray-300 text-xs sm:text-sm mt-3 tracking-wider">
+              Edición, Montaje &amp; Composición Digital
+            </p>
+</div>
+</div>
+<!-- 2 Selection Pills with Butterflies on Sides (Mockup 6) -->
+<div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mb-16">
+<div class="flex items-center gap-3">
+<span class="text-2xl text-brand-pink floating-mini-butterfly"><i class="fa-solid fa-dove"></i></span>
+<button class="btn-pill-blue px-7 py-3 text-base uppercase font-bold tracking-wider">
+              Imágenes Editadas
+            </button>
+</div>
+<div class="flex items-center gap-3">
+<button class="btn-pill-blue px-7 py-3 text-base uppercase font-bold tracking-wider">
+              Motion Graphics
+            </button>
+<span class="text-2xl text-brand-pink floating-mini-butterfly"><i class="fa-solid fa-dove"></i></span>
+</div>
+</div>
+<!-- Section: Imágenes Editadas -->
+<div class="mb-20">
+<div class="inline-block bg-brand-blueCard text-white font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-base sm:text-lg mb-6 shadow">
+            Imágenes Editadas
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Retoque Publicitario Comercial &amp; Campaña Fotográfica</span>
+</div>
+<!-- Big Frame Box -->
+<div class="wireframe-box wireframe-cross h-80 sm:h-[450px] flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Campaña Comercial: Producto Cosmético', 'Montaje publicitario con retoque de piel de alta gama (Frequency Separation), integración de fondos y corrección de color.', 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<span class="text-white font-extrabold text-3xl tracking-widest uppercase">FOTO DE CAMPAÑA</span>
+<span class="text-xs text-white/80 mt-2 bg-black/40 px-3 py-1 rounded-full"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Explorar Composición</span>
+</div>
+</div>
+<!-- Section: Motion Graphics -->
+<div>
+<div class="inline-block bg-brand-blueCard text-white font-extrabold px-6 py-2 rounded-full uppercase tracking-wider text-base sm:text-lg mb-6 shadow">
+            Motion Graphics
+          </div>
+<div class="flex items-center gap-3 text-brand-pinkLight font-semibold mb-4">
+<span class="w-3 h-3 rounded-full bg-brand-pink inline-block"></span>
+<span>Identidad Dinámica, Kinetic Typography &amp; Bumper Ads</span>
+</div>
+<div class="wireframe-box wireframe-cross h-80 sm:h-[450px] flex flex-col items-center justify-center cursor-pointer hover:border-brand-pink transition" onclick="openArtModal('Pieza Motion Graphics: Reel Creativo', 'Animación de logos, transiciones fluidas con gráficos vectoriales en After Effects para redes sociales y TV.', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
+<div class="w-16 h-16 rounded-full bg-brand-pink text-slate-900 flex items-center justify-center text-2xl shadow-xl mb-3">
+<i class="fa-solid fa-play ml-1"></i>
+</div>
+<span class="text-white font-extrabold text-3xl tracking-widest uppercase">FOTO / MOTION REEL</span>
+<span class="text-xs text-white/80 mt-2 bg-black/40 px-3 py-1 rounded-full">Reproducir Video y Keyframes</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PublicidadAudiovisualSection -->
+<!-- BEGIN: ContactoSection (Imagen 5 / Wireframe 7.png) -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-brand-darkBg" data-purpose="contacto-section" id="contacto">
+<div class="max-w-6xl mx-auto">
+<!-- Scalloped Container (Fiel al Wireframe 5) -->
+<div class="scalloped-container p-6 sm:p-10 lg:p-14 text-slate-900">
+<!-- Big Black Title Banner with Pink Underline -->
+<div class="bg-black/95 max-w-lg mx-auto py-5 px-8 rounded-2xl border-2 border-brand-pink shadow-2xl text-center mb-14">
+<h2 class="text-4xl sm:text-5xl font-boldTitle text-brand-pink tracking-wider">
+              CONTACTO
+            </h2>
+<div class="w-44 h-1.5 bg-brand-pink mx-auto mt-2 rounded-full"></div>
+</div>
+<!-- 3 Columns Layout: Redes Sociales | Formulario | Correos -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<!-- Columna 1: Redes Sociales -->
+<div class="flex flex-col items-center">
+<!-- Butterfly decorative detail on top left column (boceto) -->
+<div class="flex items-center gap-2 mb-3">
+<span class="text-3xl text-slate-900 floating-mini-butterfly">
+<i class="fa-solid fa-feather"></i>
+</span>
+<span class="btn-pill-blue px-6 py-2 text-sm uppercase font-extrabold shadow">
+                  Redes Sociales
+                </span>
+</div>
+<!-- Blue Container with Social items -->
+<div class="bg-brand-blueCard p-6 rounded-3xl w-full text-white shadow-lg space-y-4">
+<a class="flex items-center gap-3 p-2 rounded-xl bg-white/10 hover:bg-white/20 transition group" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-bluePrimary text-lg group-hover:scale-110 transition">
+<i class="fa-brands fa-instagram"></i>
+</div>
+<div>
+<span class="text-xs text-brand-pinkLight block">Instagram</span>
+<span class="text-sm font-semibold text-white">@marisa.art3d</span>
+</div>
+</a>
+<a class="flex items-center gap-3 p-2 rounded-xl bg-white/10 hover:bg-white/20 transition group" href="https://artstation.com" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-bluePrimary text-lg group-hover:scale-110 transition">
+<i class="fa-brands fa-artstation"></i>
+</div>
+<div>
+<span class="text-xs text-brand-pinkLight block">ArtStation</span>
+<span class="text-sm font-semibold text-white">artstation.com/marisa</span>
+</div>
+</a>
+<a class="flex items-center gap-3 p-2 rounded-xl bg-white/10 hover:bg-white/20 transition group" href="https://behance.net" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-bluePrimary text-lg group-hover:scale-110 transition">
+<i class="fa-brands fa-behance"></i>
+</div>
+<div>
+<span class="text-xs text-brand-pinkLight block">Behance</span>
+<span class="text-sm font-semibold text-white">behance.net/marisacreative</span>
+</div>
+</a>
+<a class="flex items-center gap-3 p-2 rounded-xl bg-white/10 hover:bg-white/20 transition group" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-bluePrimary text-lg group-hover:scale-110 transition">
+<i class="fa-brands fa-linkedin-in"></i>
+</div>
+<div>
+<span class="text-xs text-brand-pinkLight block">LinkedIn</span>
+<span class="text-sm font-semibold text-white">linkedin.com/in/marisa-art</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Columna 2: Formulario Interactivo -->
+<div class="flex flex-col items-center">
+<div class="mb-3">
+<span class="btn-pill-blue px-8 py-2 text-sm uppercase font-extrabold shadow">
+                  Formulario
+                </span>
+</div>
+<!-- Interactive Form -->
+<form class="w-full space-y-4" id="contactForm" onsubmit="handleContactSubmit(event)">
+<div>
+<input class="w-full px-5 py-3 rounded-full bg-brand-blueMuted text-white placeholder-white/80 border-0 focus:ring-2 focus:ring-brand-pink shadow text-sm" id="contactName" placeholder="Tu Nombre completo..." required="" type="text"/>
+</div>
+<div>
+<input class="w-full px-5 py-3 rounded-full bg-brand-blueMuted text-white placeholder-white/80 border-0 focus:ring-2 focus:ring-brand-pink shadow text-sm" id="contactEmail" placeholder="Tu Correo electrónico..." required="" type="email"/>
+</div>
+<div>
+<textarea class="w-full px-5 py-3 rounded-2xl bg-brand-blueMuted text-white placeholder-white/80 border-0 focus:ring-2 focus:ring-brand-pink shadow text-sm resize-none" id="contactMessage" placeholder="Detalles de tu propuesta o comisión..." required="" rows="3"></textarea>
+</div>
+<button class="btn-pill-pink w-full py-3 text-sm font-bold shadow-md hover:scale-[1.02] flex items-center justify-center gap-2" type="submit">
+<i class="fa-regular fa-paper-plane"></i> Enviar Mensaje
+                </button>
+<!-- Feedback Toast -->
+<div class="hidden p-3 bg-emerald-600 text-white text-xs rounded-xl text-center font-semibold shadow" id="formSuccessToast">
+                  ¡Gracias! Tu mensaje ha sido enviado exitosamente. Responderé a la brevedad.
+                </div>
+</form>
+</div>
+<!-- Columna 3: Correos / Contacto Directo -->
+<div class="flex flex-col items-center">
+<div class="mb-3">
+<span class="btn-pill-blue px-8 py-2 text-sm uppercase font-extrabold shadow">
+                  Correos
+                </span>
+</div>
+<!-- Direct Email and Availability Info Card -->
+<div class="bg-brand-blueCard p-6 rounded-3xl w-full text-white shadow-lg space-y-4">
+<div class="flex items-start gap-3 p-3 rounded-xl bg-white/10">
+<div class="w-8 h-8 rounded-full bg-brand-pink text-slate-900 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+<i class="fa-regular fa-envelope"></i>
+</div>
+<div>
+<span class="text-xs text-brand-pinkLight block font-bold">Proyectos &amp; Contrataciones:</span>
+<a class="text-sm font-semibold hover:underline break-all text-white" href="mailto:hola@marisa-portfolio.art">
+                      hola@marisa-portfolio.art
+                    </a>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-xl bg-white/10">
+<div class="w-8 h-8 rounded-full bg-brand-pink text-slate-900 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+<div>
+<span class="text-xs text-brand-pinkLight block font-bold">Comisiones Freelance:</span>
+<a class="text-sm font-semibold hover:underline break-all text-white" href="mailto:comisiones@marisa-portfolio.art">
+                      comisiones@marisa-portfolio.art
+                    </a>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-white/10 text-xs text-brand-pinkLight leading-relaxed">
+<strong class="text-white block mb-1"><i class="fa-solid fa-clock mr-1"></i> Disponibilidad:</strong>
+                  Abierta a puestos de tiempo completo, proyectos freelance y comisiones en arte 3D y conceptual.
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ContactoSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-black py-10 border-t border-white/10 text-center text-gray-400 text-sm" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-white font-title text-xl">
+<span>Portafolio De Marisa</span>
+<span class="text-brand-pink text-sm"><i class="fa-solid fa-heart"></i></span>
+</div>
+<p class="text-xs text-gray-500">
+        Diseñado e implementado con base en los esquemas y bocetos originales de arte conceptual.
+      </p>
+<div class="flex items-center gap-4 text-gray-300">
+<a class="hover:text-brand-pink transition text-xs font-semibold uppercase tracking-wider" href="#hero">Volver Arriba ↑</a>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: InteractiveModal -->
+<div class="fixed inset-0 z-50 hidden modal-backdrop-blur flex items-center justify-center p-4" id="artModal" onclick="closeArtModal(event)">
+<div class="bg-brand-cardDark border-2 border-brand-pink/50 rounded-3xl max-w-3xl w-full p-6 sm:p-8 text-white relative shadow-2xl" onclick="event.stopPropagation()">
+<!-- Close Button -->
+<button aria-label="Cerrar ventana" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-brand-pink hover:text-slate-900 transition flex items-center justify-center text-lg" onclick="closeArtModal()">
+<i class="fa-solid fa-xmark"></i>
+</button>
+<!-- Modal Content Header -->
+<h3 class="text-2xl sm:text-3xl font-extrabold text-brand-pink mb-2" id="modalTitle">
+        Título de la Obra
+      </h3>
+<p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed" id="modalDesc">
+        Descripción detallada de la pieza.
+      </p>
+<!-- Modal Image Container -->
+<div class="wireframe-box wireframe-cross h-72 sm:h-96 w-full flex items-center justify-center relative overflow-hidden rounded-2xl">
+<img alt="Detalle de la obra" class="w-full h-full object-contain" id="modalImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgcB3L5XLY5rMB5VC2y1zaRZterPZSpi1A742zRfkpQXUW1jXkZ7LZ1JRTLjra0W-0vZDaVUO9asEj4QfqjE2vmCSXknX0BlEgN1xQq9Zz7CVSLI8lhf9R-YxOe-wEEW7xZ-10q2cq-H_EYiI3sz9-1QjmX3CZaPwpqHTUj9fZ-MpZsGp1pnuWyW_Qu3KO_WpQ7ChmFBXhLgGnE3RRrQn_wqj2hFg9XA_qSIk4fgutDDm-sxF4XBv3"/>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="btn-pill-pink px-6 py-2 text-sm font-bold" onclick="closeArtModal()">
+          Cerrar Vista Previa
+        </button>
+</div>
+</div>
+</div>
+<!-- END: InteractiveModal -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="mobile-menu-interactions">
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Cerrar menú al hacer clic en enlaces en móvil
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+<script data-purpose="portfolio-modal-and-form">
+    // Control de Modal de visualización
+    const artModal = document.getElementById('artModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalImage = document.getElementById('modalImage');
+
+    function openArtModal(title, description, imgUrl) {
+      modalTitle.textContent = title;
+      modalDesc.textContent = description;
+      modalImage.src = imgUrl;
+      modalImage.alt = title;
+      artModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeArtModal() {
+      artModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Tecla ESC para cerrar modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !artModal.classList.contains('hidden')) {
+        closeArtModal();
+      }
+    });
+
+    // Formulario de Contacto Interactivo
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const toast = document.getElementById('formSuccessToast');
+      const form = document.getElementById('contactForm');
+      
+      toast.classList.remove('hidden');
+      form.reset();
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 5000);
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Publicidad Audiovisual | Portafolio De Marisa</title>
+    <!-- Google Fonts: Pacifico / Shrikhand / Montserrat -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Pacifico&amp;family=Shrikhand&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Fondo del encabezado (se usa como textura difuminada) -->
+    <link as="image" href="assets/img/audiovisual/fondo.jpg" rel="preload" />
+    <!-- Bootstrap 5 (local) + estilos propios -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/theme-init.js"></script>
+    <link href="css/styles.css?v=20261025i" rel="stylesheet" />
+    <!-- AOS (Animate On Scroll) -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Preloader (tiempo de espera) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-butterfly" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand-pink-light)"/><stop offset=".5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/></linearGradient>
+          <linearGradient id="pgB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--brand-pink-mid)"/></linearGradient>
+        </defs>
+        <g class="pg-wing pg-wing-l"><path d="M32 30 C18 8 2 10 6 26 C8 36 22 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C22 40 10 52 20 56 C30 60 34 46 33 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-wing pg-wing-r"><path d="M32 30 C46 8 62 10 58 26 C56 36 42 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C42 40 54 52 44 56 C34 60 30 46 31 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-body"><ellipse cx="32" cy="33" rx="2.3" ry="13" fill="#fff"/><path d="M31 21 C27 13 24 10 22 9" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M33 21 C37 13 40 10 42 9" stroke="#fff" stroke-width="1.4" fill="none"/><circle cx="22" cy="9" r="1.7" fill="#fff"/><circle cx="42" cy="9" r="1.7" fill="#fff"/></g>
+      </svg>
+      <div class="preloader-text">cargando...<span class="typed-cursor">|</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+    <!-- BEGIN: Decorative Palette Swatches -->
+    <aside aria-hidden="true" class="side-palette-strip d-none d-lg-flex">
+        <div class="swatch-bar bg-brand-swatch1"></div>
+        <div class="swatch-bar bg-brand-swatch2"></div>
+        <div class="swatch-bar bg-brand-swatch3"></div>
+        <div class="swatch-bar bg-brand-swatch4"></div>
+        <div class="swatch-bar bg-brand-swatch5"></div>
+        <div class="swatch-bar bg-brand-swatch6"></div>
+    </aside>
+    <aside aria-hidden="true" class="side-palette-strip-right d-none d-lg-flex">
+        <div class="swatch-bar-right bg-brand-swatch1"></div>
+        <div class="swatch-bar-right bg-brand-swatch2"></div>
+        <div class="swatch-bar-right bg-brand-swatch3"></div>
+        <div class="swatch-bar-right bg-brand-swatch4"></div>
+        <div class="swatch-bar-right bg-brand-swatch5"></div>
+        <div class="swatch-bar-right bg-brand-swatch6"></div>
+    </aside>
+    <!-- END: Decorative Palette Swatches -->
+
+    <!-- BEGIN: MainHeader -->
+    <header class="site-header" data-purpose="main-navigation">
+        <div class="container-site header-inner">
+            <a class="mobile-logo font-title" href="index.html">Marisa</a>
+            <button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir Menú"
+                class="mobile-toggle d-md-none" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav aria-label="Navegación principal" class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a aria-current="page" class="nav-link active"
+                            href="audiovisual.html">Publicidad Audiovisual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tradicional.html">Arte tradicional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="2d.html">Arte 2D Digital</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3d.html">3D</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item home-pill-item">
+                        <a class="nav-link home-pill" href="index.html"><i class="fa-solid fa-house text-xs"></i> Home
+                            Page</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END: MainHeader -->
+
+    <!-- BEGIN: MainContent -->
+    <main class="main-content">
+        <section class="section section-border" data-purpose="publicidad-audiovisual" id="audiovisual">
+            <div class="container-site">
+
+                <!-- Header con franja difuminada al 1/3 -->
+                <div
+                    class="av-fringe-header wireframe-box title-frame-clean p-4 sm-p-8 lg-p-14 text-center mb-10 mb-sm-12">
+             
+                    <div class="av-fringe-content">
+                        <div class="banner-badge banner-badge-wide">
+                            <h2 class="banner-title banner-title--av">PUBLICIDAD AUDIOVISUAL</h2>
+                            <div class="banner-rule w-24 w-sm-48"></div>
+                            <p class="banner-note">Edición, Montaje &amp; Composición Digital</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categorías -->
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-md-6 mb-12"
+                    data-aos="fade-up">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-xl text-brand-pink floating-mini-butterfly d-none d-sm-inline-flex">
+                            🦋
+                        </span>
+                        <a class="btn-pill-blue px-5 px-sm-7 py-2 py-sm-3 text-sm text-uppercase font-bold tracking-wider"
+                            href="#imagenes-editadas">Imágenes Editadas</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="btn-pill-blue px-5 px-sm-7 py-2 py-sm-3 text-sm text-uppercase font-bold tracking-wider"
+                            href="#motion-graphics">Motion Graphics</a>
+                        <span class="text-xl text-brand-pink floating-mini-butterfly d-none d-sm-inline-flex">
+                            🦋
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Imágenes Editadas -->
+                <div class="mb-16" id="imagenes-editadas">
+                    <div class="pill-title pill-title-blue pill-title-sm" data-aos="fade-right">Imágenes Editadas</div>
+                    <div class="feature-line" data-aos="fade-up" data-aos-delay="60">
+                        <span class="feature-dot"></span>
+                        <span>Publicidad Comercial, edición &amp; fotográfia</span>
+                    </div>
+
+                    <div class="av-gallery" data-aos="zoom-in-up">
+                        <header class="av-gallery-head">
+                            <div class="av-gallery-copy">
+                                <span class="av-kicker">Campañas &amp; composición</span>
+                                <h3>Selección de imágenes editadas</h3>
+                                <p>Retoque, montaje y dirección de color para piezas publicitarias, editoriales y
+                                    proyectos personales.</p>
+                            </div>
+                            <span class="av-gallery-tag">6 piezas</span>
+                        </header>
+
+                        <div class="carousel slide av-carousel" data-bs-touch="true" id="avCarousel" role="region"
+                            aria-roledescription="carousel" aria-label="Carrusel de imágenes editadas">
+                            <div class="carousel-indicators">
+                                <button aria-current="true" aria-label="Café Nocturno" class="active"
+                                    data-bs-slide-to="0" data-bs-target="#avCarousel" type="button"></button>
+                                <button aria-label="Cielo Felino" data-bs-slide-to="1" data-bs-target="#avCarousel"
+                                    type="button"></button>
+                                <button aria-label="Oso en las Nubes" data-bs-slide-to="2" data-bs-target="#avCarousel"
+                                    type="button"></button>
+                                <button aria-label="Tiburón Celeste" data-bs-slide-to="3" data-bs-target="#avCarousel"
+                                    type="button"></button>
+                                <button aria-label="Favorite Person" data-bs-slide-to="4" data-bs-target="#avCarousel"
+                                    type="button"></button>
+                                <button aria-label="LRE Pink Peach" data-bs-slide-to="5" data-bs-target="#avCarousel"
+                                    type="button"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="av-slide">
+                                        <img aria-hidden="true" alt="" class="av-slide-bg" decoding="async"
+                                            loading="eager" src="assets/img/audiovisual/01-cafe-nocturno.jpg" />
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Café Nocturno"
+                                            class="av-slide-hit"
+                                            data-art-desc="Retoque de color, detalles esteticos y ambiente para la maqueta fotografíada."
+                                            data-art-img="assets/img/audiovisual/01-cafe-nocturno.jpg"
+                                            data-art-title="Café Nocturno" type="button">
+                                            <img alt="Interior de café con asientos verdes y vitrales, retocado en tonos cálidos"
+                                                class="av-slide-main" decoding="async" height="1200" loading="eager"
+                                                src="assets/img/audiovisual/01-cafe-nocturno.jpg" width="1600" />
+                                            <span class="av-slide-caption">01 · Café Nocturno</span>
+                                            <span class="av-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    pieza</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="av-slide">
+                                        <img aria-hidden="true" alt="" class="av-slide-bg" decoding="async"
+                                            loading="eager" src="assets/img/audiovisual/02-cielo-felino.jpg" />
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Cielo Felino"
+                                            class="av-slide-hit"
+                                            data-art-desc="Montaje digital que combina un cielo fotográfico con una silueta felina ilustrada."
+                                            data-art-img="assets/img/audiovisual/02-cielo-felino.jpg"
+                                            data-art-title="Mantarraya" type="button">
+                                            <img alt="Composición surrealista de un cielo dramático con silueta de mantarraya"
+                                                class="av-slide-main" decoding="async" height="1600" loading="eager"
+                                                src="assets/img/audiovisual/02-cielo-felino.jpg" width="1600" />
+                                            <span class="av-slide-caption">02 · Cielo Felino</span>
+                                            <span class="av-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    pieza</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="av-slide">
+                                        <img aria-hidden="true" alt="" class="av-slide-bg" decoding="async"
+                                            loading="eager" src="assets/img/audiovisual/03-oso-nubes.jpg" />
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Oso en las Nubes"
+                                            class="av-slide-hit"
+                                            data-art-desc="Composición surrealista con ilustración, nubes y fotografía de paisaje."
+                                            data-art-img="assets/img/audiovisual/03-oso-nubes.jpg"
+                                            data-art-title="Oso en las Nubes" type="button">
+                                            <img alt="Montaje digital de un oso polar sobre una nube en un cielo dividido"
+                                                class="av-slide-main" decoding="async" height="1600" loading="eager"
+                                                src="assets/img/audiovisual/03-oso-nubes.jpg" width="1600" />
+                                            <span class="av-slide-caption">03 · Oso en las Nubes</span>
+                                            <span class="av-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    pieza</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="av-slide">
+                                        <img aria-hidden="true" alt="" class="av-slide-bg" decoding="async"
+                                            loading="eager" src="assets/img/audiovisual/04-tiburon-celeste.jpg" />
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Tiburón Celeste"
+                                            class="av-slide-hit"
+                                            data-art-desc="Intervención fotográfica con ilustración digital y composición aérea."
+                                            data-art-img="assets/img/audiovisual/04-tiburon-celeste.jpg"
+                                            data-art-title="Tiburón Celeste" type="button">
+                                            <img alt="Composición aérea con un tiburón dibujado sobre el cielo y las nubes"
+                                                class="av-slide-main" decoding="async" height="1600" loading="eager"
+                                                src="assets/img/audiovisual/04-tiburon-celeste.jpg" width="1600" />
+                                            <span class="av-slide-caption">04 · Tiburón Celeste</span>
+                                            <span class="av-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    pieza</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="av-slide">
+                                        <img aria-hidden="true" alt="" class="av-slide-bg" decoding="async"
+                                            loading="eager" src="assets/img/audiovisual/05-favorite-person.jpg" />
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Favorite Person"
+                                            class="av-slide-hit"
+                                            data-art-desc="Fan edit editorial con retrato, tipografía y collage de texturas."
+                                            data-art-img="assets/img/audiovisual/05-favorite-person.jpg"
+                                            data-art-title="Collage" type="button">
+                                            <img alt="Póster editorial de fan art con retrato, tipografía y collage"
+                                                class="av-slide-main" decoding="async" height="1600" loading="eager"
+                                                src="assets/img/audiovisual/05-favorite-person.jpg" width="1131" />
+                                            <span class="av-slide-caption">05 · Collage</span>
+                                            <span class="av-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    pieza</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="av-slide">
+                                        <img aria-hidden="true" alt="" class="av-slide-bg" decoding="async"
+                                            loading="eager" src="assets/img/audiovisual/06-lre-pink-peach.jpg" />
+                                        <button aria-haspopup="dialog" aria-label="Ampliar LRE Pink Peach"
+                                            class="av-slide-hit"
+                                            data-art-desc="Publicidad de producto con iluminación rosa, bodegón y acabado premium."
+                                            data-art-img="assets/img/audiovisual/06-lre-pink-peach.jpg"
+                                            data-art-title="LRE · Pink Peach" type="button">
+                                            <img alt="Bodegón publicitario de una crema de manos rosa sobre fondo oscuro"
+                                                class="av-slide-main" decoding="async" height="1600" loading="eager"
+                                                src="assets/img/audiovisual/06-lre-pink-peach.jpg" width="1176" />
+                                            <span class="av-slide-caption">06 · LRE · Pink Peach</span>
+                                            <span class="av-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    pieza</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                data-bs-target="#avCarousel" type="button">
+                                <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button aria-label="Siguiente" class="carousel-control-next" data-bs-slide="next"
+                                data-bs-target="#avCarousel" type="button">
+                                <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motion Graphics -->
+                <div id="motion-graphics">
+                    <div class="pill-title pill-title-blue pill-title-sm" data-aos="fade-right">Motion Graphics</div>
+                    <div class="feature-line" data-aos="fade-up" data-aos-delay="60">
+                        <span class="feature-dot"></span>
+                        <span>Vídeo realizado en After Effec</span>
+                    </div>
+
+                    <div class="av-motion-showcase">
+                        <article class="av-video-card av-video-card--wide" data-aos="zoom-in">
+                            <div class="av-video-card-head">
+                                <span class="av-video-badge"><i class="fa-solid fa-film"></i> Pieza principal</span>
+                                <span class="av-video-spec">00:11</span>
+                            </div>
+                            <div class="av-video-frame">
+                                <video aria-label="Motion graphics horizontal de once segundos" controls playsinline
+                                    poster="assets/img/audiovisual/motion-horizontal-poster.jpg" preload="metadata">
+                                    <source src="assets/video/audiovisual/motion-horizontal.mp4" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de video HTML5.
+                                </video>
+                            </div>
+                            <div class="av-video-meta">
+                                <div>
+                                    <h3>Motion Graphics · Horizontal</h3>
+                                    <p>Pieza principal en formato 16:9: ritmo y composición
+                                        para pantalla. Inspirado en la película de Black Panther</p>
+                                </div>
+                    
+                            </div>
+                        </article>
+
+                        <div class="av-video-verticals">
+                            <article class="av-video-card av-video-card--vertical" data-aos="fade-right"
+                                data-aos-delay="100">
+                                <div class="av-video-card-head">
+                                    <span class="av-video-spec">00:15</span>
+                                </div>
+                                <div class="av-video-frame av-video-frame--portrait">
+                                    <video aria-label="Motion graphics vertical uno de quince segundos" controls
+                                        playsinline poster="assets/img/audiovisual/motion-vertical-01-poster.jpg"
+                                        preload="metadata">
+                                        <source src="assets/video/audiovisual/motion-vertical-01.mp4"
+                                            type="video/mp4" />
+                                        Tu navegador no soporta la reproducción de video HTML5.
+                                    </video>
+                                </div>
+                                <div class="av-video-meta av-video-meta--stack">
+                                    <h3>Doodles 2D en un Vídeo</h3>
+                                    <p>Video tomado de TikTok de la cuenta de Le Sserafim. Realicé los doodles pero que siguieran el ritmo y los pasos.</p>
+                                </div>
+                            </article>
+
+                            <article class="av-video-card av-video-card--vertical" data-aos="fade-left"
+                                data-aos-delay="180">
+                                <div class="av-video-card-head">
+                                    <span class="av-video-spec">00:15</span>
+                                </div>
+                                <div class="av-video-frame av-video-frame--portrait">
+                                    <video aria-label="Motion graphics vertical dos de quince segundos" controls
+                                        playsinline poster="assets/img/audiovisual/motion-vertical-02-poster.jpg"
+                                        preload="metadata">
+                                        <source src="assets/video/audiovisual/motion-vertical-02.mp4"
+                                            type="video/mp4" />
+                                        Tu navegador no soporta la reproducción de video HTML5.
+                                    </video>
+                                </div>
+                                <div class="av-video-meta av-video-meta--stack">
+                                    <h3>Publicidad</h3>
+                                    <p>Video comercial de un producto realizado en After Effect.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- END: MainContent -->
+
+    <!-- BEGIN: MainFooter -->
+    <footer class="site-footer" data-purpose="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span>Portafolio De Marisa</span>
+                <span class="text-brand-pink text-sm"><i class="fa-solid fa-heart"></i></span>
+            </div>
+            <p class="text-xs text-gray-500">La clave es la práctica y la resiliencia.</p>
+            <div class="d-flex gap-4 text-gray-300">
+                <a class="hover-text-brand-pink transition text-xs font-bold text-uppercase tracking-wider"
+                    href="index.html#hero">Volver Arriba ↑</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END: MainFooter -->
+
+    <!-- BEGIN: InteractiveModal -->
+    <div aria-hidden="true" class="modal fade art-modal" id="artModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body position-relative">
+                    <button aria-label="Cerrar ventana" class="art-modal-close" onclick="closeArtModal()" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h3 class="modal-title-pink" id="modalTitle">Título de la Obra</h3>
+                    <p class="modal-desc" id="modalDesc">Descripción detallada de la pieza.</p>
+                    <div class="wireframe-box art-modal-image">
+                        <img alt="Detalle de la obra" class="w-100 h-100 object-contain" id="modalImage" src="" />
+                    </div>
+                    <div class="mt-6 d-flex justify-content-end">
+                        <button class="btn-pill-pink px-6 py-2 text-sm" onclick="closeArtModal()" type="button">Cerrar
+                            Vista Previa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: InteractiveModal -->
+
+    <!-- BEGIN: Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/anime/anime.min.js"></script>
+    <script src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
+    <script src="assets/vendor/canvas-confetti/confetti.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/particles/particles.min.js"></script>
+    <script src="js/main.js?v=20261025f"></script>
+    <!-- END: Scripts -->
+</body>
+
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="utf-8" />
+     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+     <title>3D | Portafolio De Marisa</title>
+     <!-- Google Fonts: Pacifico / Shrikhand / Montserrat -->
+     <link href="https://fonts.googleapis.com" rel="preconnect" />
+     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Pacifico&amp;family=Shrikhand&amp;display=swap"
+          rel="stylesheet" />
+     <!-- Font Awesome Icons -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+     <!-- Bootstrap 5 (local) + estilos propios -->
+     <link href="css/bootstrap.min.css" rel="stylesheet" />
+     <script src="js/theme-init.js"></script>
+    <link href="css/styles.css?v=20261025i" rel="stylesheet" />
+     <!-- AOS (Animate On Scroll) -->
+     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Preloader (tiempo de espera) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-butterfly" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand-pink-light)"/><stop offset=".5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/></linearGradient>
+          <linearGradient id="pgB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--brand-pink-mid)"/></linearGradient>
+        </defs>
+        <g class="pg-wing pg-wing-l"><path d="M32 30 C18 8 2 10 6 26 C8 36 22 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C22 40 10 52 20 56 C30 60 34 46 33 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-wing pg-wing-r"><path d="M32 30 C46 8 62 10 58 26 C56 36 42 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C42 40 54 52 44 56 C34 60 30 46 31 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-body"><ellipse cx="32" cy="33" rx="2.3" ry="13" fill="#fff"/><path d="M31 21 C27 13 24 10 22 9" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M33 21 C37 13 40 10 42 9" stroke="#fff" stroke-width="1.4" fill="none"/><circle cx="22" cy="9" r="1.7" fill="#fff"/><circle cx="42" cy="9" r="1.7" fill="#fff"/></g>
+      </svg>
+      <div class="preloader-text">cargando...<span class="typed-cursor">|</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+     <!-- BEGIN: Decorative Palette Swatches (Fiel a los wireframes laterales) -->
+     <aside aria-hidden="true" class="side-palette-strip d-none d-lg-flex">
+          <div class="swatch-bar bg-brand-swatch1"></div>
+          <div class="swatch-bar bg-brand-swatch2"></div>
+          <div class="swatch-bar bg-brand-swatch3"></div>
+          <div class="swatch-bar bg-brand-swatch4"></div>
+          <div class="swatch-bar bg-brand-swatch5"></div>
+          <div class="swatch-bar bg-brand-swatch6"></div>
+     </aside>
+     <aside aria-hidden="true" class="side-palette-strip-right d-none d-lg-flex">
+          <div class="swatch-bar-right bg-brand-swatch1"></div>
+          <div class="swatch-bar-right bg-brand-swatch2"></div>
+          <div class="swatch-bar-right bg-brand-swatch3"></div>
+          <div class="swatch-bar-right bg-brand-swatch4"></div>
+          <div class="swatch-bar-right bg-brand-swatch5"></div>
+          <div class="swatch-bar-right bg-brand-swatch6"></div>
+     </aside>
+     <!-- END: Decorative Palette Swatches -->
+     <!-- BEGIN: MainHeader (Bootstrap Navbar) -->
+     <header class="site-header" data-purpose="main-navigation">
+          <div class="container-site header-inner">
+               <a class="mobile-logo font-title" href="index.html">Marisa</a>
+               <button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir Menú"
+                    class="mobile-toggle d-md-none" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+                    <i class="fa-solid fa-bars"></i>
+               </button>
+               <nav aria-label="Navegación principal" class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav">
+                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                         <li class="nav-item"><a class="nav-link" href="audiovisual.html">Publicidad Audiovisual</a>
+                         </li>
+                         <li class="nav-item"><a class="nav-link" href="tradicional.html">Arte tradicional</a></li>
+                         <li class="nav-item"><a class="nav-link" href="2d.html">Arte 2D Digital</a></li>
+                         <li class="nav-item"><a aria-current="page" class="nav-link active" href="3d.html">3D</a></li>
+                         <li class="nav-item"><a class="nav-link" href="index.html#sobre-mi">Sobre Mí</a></li>
+                         <li class="nav-item home-pill-item">
+                              <a class="nav-link home-pill" href="index.html"><i class="fa-solid fa-house text-xs"></i>
+                                   Home Page</a>
+                         </li>
+                    </ul>
+               </nav>
+          </div>
+     </header>
+     <!-- END: MainHeader -->
+     <!-- BEGIN: MainContent -->
+     <main class="main-content">
+          <!-- BEGIN: 3DSection -->
+          <section class="section section-border" data-purpose="3d-portfolio" id="art3d">
+               <div class="container-site">
+                    <!-- Header Wireframe Banner as seen in Mockup 3 -->
+                    <div class="wireframe-box title-frame-clean p-6 sm-p-10 lg-p-14 text-center mb-10 mb-sm-12">
+                         <div class="banner-badge banner-badge-wide position-relative z-10">
+                              <h2 class="banner-title banner-title--3d">3D</h2>
+                              <div class="banner-rule w-40"></div>
+                              <p class="banner-note">ANIMACIÓN • MODELADO • ILUMINACIÓN</p>
+                         </div>
+                    </div>
+                    <!-- 3 Quick Filter/Category Cards (Boceto superior) -->
+                    <div class="row g-4 mb-16">
+                         <div class="col-md-4">
+                              <a class="wireframe-box wireframe-cross p-6 text-center hover-scale-105 d-block group transition text-decoration-none"
+                                   href="#animacion-3d">
+                                   <span
+                                        class="text-white-80 font-bold text-xs tracking-wider d-block mb-2 text-uppercase">REEL</span>
+                                   <div class="h-24 d-flex align-items-center justify-content-center">
+                                        <i
+                                             class="fa-solid fa-clapperboard text-4xl text-white group-hover-text-brand-pink transition"></i>
+                                   </div>
+                                   <h3 class="text-xl sm-text-2xl font-bold text-uppercase tracking-wider text-white">
+                                        Animación 3D
+                                   </h3>
+                              </a>
+                         </div>
+                         <div class="col-md-4">
+                              <a class="wireframe-box wireframe-cross p-6 text-center hover-scale-105 d-block group transition text-decoration-none"
+                                   href="#modelado-3d">
+                                   <span
+                                        class="text-white-80 font-bold text-xs tracking-wider d-block mb-2 text-uppercase">MESH</span>
+                                   <div class="h-24 d-flex align-items-center justify-content-center">
+                                        <i
+                                             class="fa-solid fa-shapes text-4xl text-white group-hover-text-brand-pink transition"></i>
+                                   </div>
+                                   <h3 class="text-xl sm-text-2xl font-bold text-uppercase tracking-wider text-white">
+                                        Modelado 3D
+                                   </h3>
+                              </a>
+                         </div>
+                         <div class="col-md-4">
+                              <a class="wireframe-box wireframe-cross p-6 text-center hover-scale-105 d-block group transition text-decoration-none"
+                                   href="#iluminacion-render">
+                                   <span
+                                        class="text-white-80 font-bold text-xs tracking-wider d-block mb-2 text-uppercase">LIGHT</span>
+                                   <div class="h-24 d-flex align-items-center justify-content-center">
+                                        <i
+                                             class="fa-solid fa-lightbulb text-4xl text-white group-hover-text-brand-pink transition"></i>
+                                   </div>
+                                   <h3 class="text-xl sm-text-2xl font-bold text-uppercase tracking-wider text-white">
+                                        Iluminación y Render
+                                   </h3>
+                              </a>
+                         </div>
+                    </div>
+
+                    <!-- ============================================================
+     SUBSECCIÓN 1 · ANIMACIÓN 3D
+     ============================================================ -->
+                    <div class="mb-20" id="animacion-3d">
+                         <div class="pill-title pill-title-pink art3d-pill art3d-pill--anim" data-aos="fade-right">
+                              Animación 3D</div>
+                         <div class="feature-line" data-aos="fade-up" data-aos-delay="60">
+                              <span class="feature-dot"></span>
+                              <span>Video final · Render de animación e iluminación</span>
+                         </div>
+
+                         <div class="art3d-anim">
+                              <div class="art3d-video-card" data-aos="zoom-in" id="video-animacion">
+                                   <div class="art3d-card-badge"><i class="fa-solid fa-film"></i> Pieza principal</div>
+                                   <div class="art3d-video-frame">
+                                        <video class="art3d-video" controls playsinline
+                                             poster="assets/img/3d/animacion-poster.jpg" preload="metadata">
+                                             <source src="assets/video/3d/animacion-final.mp4" type="video/mp4" />
+                                             Tu navegador no soporta la reproducción de video HTML5.
+                                        </video>
+                                   </div>
+                                   <div class="art3d-video-meta">
+                                        <div>
+                                             <h3>Render final de Animación 3D</h3>
+                                             <p>Animaciones de personajes y cámara: Arais Suárez y Marisa Tzab.</p>
+                                              <p><strong>Música ambiente (luz):</strong> <a href="https://youtu.be/71JJRtIwJxo?si=3tbtEAoMn_BWjl5T" target="_blank" rel="noopener">Ver en YouTube</a></p>
+                                              <p><strong>Música ambiente (luz apagada):</strong> <a href="https://youtu.be/7RofZZuqWlY?si=8jZugy8JKmSjeO0y" target="_blank" rel="noopener">Ver en YouTube</a></p>
+                                              <p><strong>Escenas de referencia:</strong></p>
+                                              <ul class="mb-2 ps-3">
+                                                <li><a href="https://www.youtube.com/watch?v=ebvCnrjwbtM&t=246s" target="_blank" rel="noopener">Referencia 1</a></li>
+
+                                              </ul>
+                                              <p><strong>Modelos de personajes:</strong> <a href="https://www.models-resource.com/pc_computer/fivenightsatfreddyssecuritybreach/model/46467/" target="_blank" rel="noopener">Models Resource</a></p>
+                                              <p><strong>Escenario:</strong> <a href="https://sketchfab.com/3d-models/fnaf-daycare-with-no-textures-b68df2da33b24b7a9925035cd0c6ab11" target="_blank" rel="noopener">Sketchfab</a></p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- ============================================================
+     SUBSECCIÓN 2 · MODELADO 3D
+     ============================================================ -->
+                    <div class="mb-20" id="modelado-3d">
+                         <div class="pill-title pill-title-blue art3d-pill art3d-pill--model" data-aos="fade-right">
+                              Modelado 3D</div>
+                         <div class="feature-line" data-aos="fade-up" data-aos-delay="60">
+                              <span class="feature-dot"></span>
+                              <span>3 proyectos </span>
+                         </div>
+
+                         <div class="art3d-projects">
+                              <!-- Proyecto 01 · Escenario Navideño -->
+                              <article class="art3d-project" data-aos="fade-right" id="proyecto-diorama">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">01</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Escenario Navideño</h3>
+                                             <p>Escenario con modelado de props, composición y escenario completo.</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Blender · Cycles</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel" data-bs-touch="true" id="modelCarousel1"
+                                        role="region" aria-label="Carrusel del proyecto Diorama Navideño">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Vista general" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#modelCarousel1"
+                                                  type="button"></button>
+                                             <button aria-label="Detalle del tren y los regalos" data-bs-slide-to="1"
+                                                  data-bs-target="#modelCarousel1" type="button"></button>
+                                             <button aria-label="Detalle de la casa y el árbol" data-bs-slide-to="2"
+                                                  data-bs-target="#modelCarousel1" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Diorama navideño completo con casas de jengibre, árbol y tren"
+                                                            class="art3d-slide-img art3d-zoom-full" decoding="async"
+                                                            loading="lazy"
+                                                            src="assets/img/3d/modelado/diorama-01.jpg" />
+                                                       <span class="art3d-slide-caption">Vista general</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Detalle del tren y los regalos del diorama navideño"
+                                                            class="art3d-slide-img art3d-zoom-left" decoding="async"
+                                                            loading="lazy"
+                                                            src="assets/img/3d/modelado/diorama-02.jpg" />
+                                                       <span class="art3d-slide-caption">Detalle: tren y regalos</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Detalle de la casa de jengibre y los caramelos del diorama navideño"
+                                                            class="art3d-slide-img art3d-zoom-right" decoding="async"
+                                                            loading="lazy"
+                                                            src="assets/img/3d/modelado/diorama-03.jpg" />
+                                                       <span class="art3d-slide-caption">Detalle: casa y dulces</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#modelCarousel1" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#modelCarousel1" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                              </article>
+
+                              <!-- Proyecto 02 · Casa / Arquitectura -->
+                              <article class="art3d-project" data-aos="fade-left" id="proyecto-casa">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">02</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Casa / Arquitectura</h3>
+                                             <p>Siete vistas: exteriores de día y de noche, interiores, escalera y
+                                                  estudio con luz volumétrica e iluminación IES.</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Blender · Visualización Arquitectónica</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel" data-bs-touch="true" id="modelCarousel2"
+                                        role="region" aria-label="Carrusel del proyecto Casa Arquitectura">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Exterior de día" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#modelCarousel2"
+                                                  type="button"></button>
+                                             <button aria-label="Exterior de noche" data-bs-slide-to="1"
+                                                  data-bs-target="#modelCarousel2" type="button"></button>
+                                             <button aria-label="Estudio" data-bs-slide-to="2"
+                                                  data-bs-target="#modelCarousel2" type="button"></button>
+                                             <button aria-label="Comedor" data-bs-slide-to="3"
+                                                  data-bs-target="#modelCarousel2" type="button"></button>
+                                             <button aria-label="Dormitorio" data-bs-slide-to="4"
+                                                  data-bs-target="#modelCarousel2" type="button"></button>
+                                             <button aria-label="Escalera" data-bs-slide-to="5"
+                                                  data-bs-target="#modelCarousel2" type="button"></button>
+                                             <button aria-label="Comedor con luz volumétrica" data-bs-slide-to="6"
+                                                  data-bs-target="#modelCarousel2" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Exterior diurno de la casa modelada en 3D con jardín y fachada de madera"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-01.jpg" />
+                                                       <span class="art3d-slide-caption">Exterior día</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Exterior nocturno de la casa modelada en 3D con iluminación cálida"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-04.jpg" />
+                                                       <span class="art3d-slide-caption">Exterior noche</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Estudio de la casa modelado en 3D con escritorio y lámpara"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-05.jpg" />
+                                                       <span class="art3d-slide-caption">Estudio</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Comedor de la casa modelado en 3D con mesa y revestimiento de madera"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-06.jpg" />
+                                                       <span class="art3d-slide-caption">Comedor</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Dormitorio de la casa modelado en 3D con cama y luz cálida"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-02.jpg" />
+                                                       <span class="art3d-slide-caption">Dormitorio</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Escalera y detalle arquitectónico de la casa modelada en 3D"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-07.jpg" />
+                                                       <span class="art3d-slide-caption">Escalera</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Comedor de la casa modelado en 3D con luz volumétrica"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/casa-03.jpg" />
+                                                       <span class="art3d-slide-caption">Comedor · Luz
+                                                            volumétrica</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#modelCarousel2" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#modelCarousel2" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                              </article>
+
+                              <!-- Proyecto 03 · Biblioteca -->
+                              <article class="art3d-project" data-aos="fade-right" id="proyecto-biblioteca">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">03</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Recreación de escenario de la tienda de alquiler de películas</h3>
+                                             <p>Siete vistas del set. Este escenario fue recreado de la película una chica del siglo XX.</p>
+                                             <p> Los objetos fueron descargados de Blender Kit, la estructura de la tienda así como los estantes y el texturizado de las películas (cabe aclarar que las imagenes de las películas fueron tomadas de Pinterest)</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Blender · Environment</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel" data-bs-touch="true" id="modelCarousel3"
+                                        role="region" aria-label="Carrusel del proyecto Biblioteca">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Vista principal" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#modelCarousel3"
+                                                  type="button"></button>
+                                             <button aria-label="Zona de café" data-bs-slide-to="1"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                             <button aria-label="Vista general" data-bs-slide-to="2"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                             <button aria-label="Escritorio" data-bs-slide-to="3"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                             <button aria-label="Detalle con luz cálida" data-bs-slide-to="4"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                             <button aria-label="Detalle con luz fría" data-bs-slide-to="5"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                             <button aria-label="Lugar de atención" data-bs-slide-to="6"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Vista principal de la tienda de alquiler de películas modelada en 3D con estanterías"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-01.jpg" />
+                                                       <span class="art3d-slide-caption">Vista principal</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Zona de café de la tienda de alquiler de películas"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-02.jpg" />
+                                                       <span class="art3d-slide-caption">Zona de café</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Vista general de la tienda de alquiler de películas con luz cálida"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-03.jpg" />
+                                                       <span class="art3d-slide-caption">Vista general</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Escritorio de la tienda de alquiler de películas"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-04.jpg" />
+                                                       <span class="art3d-slide-caption">Escritorio</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Detalle de la tienda de alquiler de películas con luz cálida"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-05.jpg" />
+                                                       <span class="art3d-slide-caption">Detalle · Luz cálida</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Detalle de la tienda de alquiler de películas con luz fría"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-06.jpg" />
+                                                       <span class="art3d-slide-caption">Detalle · Luz fría</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Lugar de atención de la tienda de alquiler de películas"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/modelado/biblioteca-07.jpg" />
+                                                       <span class="art3d-slide-caption">Lugar de atención</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#modelCarousel3" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#modelCarousel3" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                              </article>
+
+                              <article class="art3d-project" data-aos="fade-right" id="proyecto-producto">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">04</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Modelado y texturizado de un producto</h3>
+                                             <p>Modelado en 3D de un repelente en Blender</p>
+                                             <p>Realicé el modelado del producto así como la etiqueta de la lata y los renders.</p>
+                                             <p>El personaje publicitario lo realizó Arais Suárez y el logo Reyes Estrada.</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Blender · Environment</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel" data-bs-touch="true" id="modelCarousel4"
+                                        role="region" aria-label="Carrusel del proyecto Biblioteca">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Composición del modelo" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#modelCarousel3"
+                                                  type="button"></button>
+                                             <button aria-label="Vistas" data-bs-slide-to="1"
+                                                  data-bs-target="#modelCarousel3" type="button"></button>
+                                        </div>
+     
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Pasillo central de la biblioteca modelada en 3D con estanterías y mesas"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/image/Modelado 3d/Modelado 3d/p4/Carrusel 1.png" />
+                                                       <span class="art3d-slide-caption">Composición del modelo</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--cover">
+                                                       <img alt="Biblioteca modelada en 3D con mesas verdes y estanterías"
+                                                            class="art3d-slide-img" decoding="async" loading="lazy"
+                                                            src="assets/image/Modelado 3d/Modelado 3d/p4/Carrusel 2.png" />
+                                                       <span class="art3d-slide-caption">Vistas</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#modelCarousel4" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#modelCarousel4" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                         </div>
+
+                         <!-- Miniaturas resumen · una por proyecto -->
+                         <div class="art3d-previews" aria-label="Resumen de proyectos de modelado 3D"
+                              id="previews-modelado">
+                              <button aria-haspopup="dialog" class="art3d-preview" data-aos="zoom-in"
+                                   data-art-desc="Casa de gengibre realizada en Blender y texturas realizadas en FireAlpaca."
+                                   data-art-img="assets/image/Modelado 3d/Modelado 3d/Cuadro 1.jpeg"
+                                   data-art-title="Casa gengibre" type="button">
+                                   <span class="art3d-preview-media"><img alt="Casa gengibre"
+                                             decoding="async" loading="lazy"
+                                             src="assets/image/Modelado 3d/Modelado 3d/Cuadro 1.jpeg" /></span>
+                                   <span class="art3d-preview-label">Casa gengibre</span>
+                              </button>
+                         
+                              <button aria-haspopup="dialog" class="art3d-preview" data-aos="zoom-in"
+                                   data-aos-delay="100"
+                                   data-art-desc="Vista de cerca del tambor realizado para el escenario navideño"
+                                   data-art-img="assets/image/Modelado 3d/Modelado 3d/Cuadro 2.jpeg"
+                                   data-art-title="Tambor navideño" type="button">
+                                   <span class="art3d-preview-media"><img alt="Tambor navideño"
+                                             decoding="async" loading="lazy"
+                                             src="assets/image/Modelado 3d/Modelado 3d/Cuadro 2.jpeg" /></span>
+                                   <span class="art3d-preview-label">Tambor navideño</span>
+                              </button>
+
+                              <button aria-haspopup="dialog" class="art3d-preview" data-aos="zoom-in"
+                                   data-aos-delay="200"
+                                   data-art-desc="Vista de cerca del Trineo."
+                                   data-art-img="assets/image/Modelado 3d/Modelado 3d/Cuadro 3.jpeg" 
+                                   data-art-title="Trineo"
+                                   type="button">
+                                   <span class="art3d-preview-media"><img alt="Trineo 3D"
+                                             decoding="async" loading="lazy"
+                                             src="assets/image/Modelado 3d/Modelado 3d/Cuadro 3.jpeg" /></span>
+                                   <span class="art3d-preview-label">Trineo</span>
+                              </button>
+
+                              <button aria-haspopup="dialog" class="art3d-preview" data-aos="zoom-in"
+                                   data-aos-delay="200"
+                                   data-art-desc="Vista de las galletas decorativas"
+                                   data-art-img="assets/image/Modelado 3d/Modelado 3d/Cuadro 4.jpeg" 
+                                   data-art-title="Galletas"
+                                   type="button">
+                                   <span class="art3d-preview-media"><img alt="Galletas 3D"
+                                             decoding="async" loading="lazy"
+                                             src="assets/image/Modelado 3d/Modelado 3d/Cuadro 4.jpeg" /></span>
+                                   <span class="art3d-preview-label">Galletas</span>
+                              </button>
+
+
+                         </div>
+
+                         <!-- Extras · delfín y video de modelado en formato compacto -->
+                         <div class="art3d-extras" id="extras-modelado">
+                              <article class="art3d-extra-card" data-aos="fade-up">
+                                   <div class="art3d-card-badge"><i class="fa-solid fa-fish"></i> Prop · Modelado</div>
+                                   <button aria-haspopup="dialog" class="art3d-extra-media"
+                                        data-art-desc="Delfín esculpido y coloreado en 3D."
+                                        data-art-img="assets/img/3d/modelado/delfin-01.jpg"
+                                        data-art-title="Delfín · Modelado" type="button">
+                                        <img alt="Delfín modelado en 3D sobre una superficie neutra" decoding="async"
+                                             loading="lazy" src="assets/img/3d/modelado/delfin-01.jpg" />
+                                        <span class="art3d-extra-zoom"><i class="fa-solid fa-expand"></i> Ver
+                                             detalle</span>
+                                   </button>
+                                   <div class="art3d-video-meta">
+                                        <div>
+                                             <h3>Delfín</h3>
+                                             <p>Delfín esculpido y coloreado en 3D.</p>
+                                        </div>
+                                        <span class="art3d-video-spec">Prop · 3D</span>
+                                   </div>
+                              </article>
+
+                              <article class="art3d-video-card art3d-video-card--compact" data-aos="fade-up"
+                                   data-aos-delay="100" id="video-modelado">
+                                   <div class="art3d-card-badge"><i class="fa-solid fa-cube"></i> Video de modelado
+                                   </div>
+                                   <div class="art3d-video-frame">
+                                        <video class="art3d-video" controls playsinline
+                                             poster="assets/img/3d/modelado/personaje-01.jpg" preload="metadata">
+                                             <source src="assets/video/3d/modelado-turntable.mp4" type="video/mp4" />
+                                             Tu navegador no soporta la reproducción de video HTML5.
+                                        </video>
+                                   </div>
+                                   <div class="art3d-video-meta">
+                                        <div>
+                                             <h3>Turntable del personaje</h3>
+                                             <p>Recorrido de mi modelo inspirado en mi y en las figuras de Funko Pop
+                                             </p>
+                                        </div>
+                                   </div>
+                              </article>
+                         </div>
+                    </div>
+
+                    <!-- ============================================================
+     SUBSECCIÓN 3 · ILUMINACIÓN Y RENDER
+     ============================================================ -->
+                    <div id="iluminacion-render">
+                         <div class="pill-title pill-title-pink art3d-pill art3d-pill--light" data-aos="fade-right">
+                              Iluminación y Render</div>
+                         <div class="feature-line" data-aos="fade-up" data-aos-delay="60">
+                              <span class="feature-dot"></span>
+                              <span>3 proyectos · 10 estudios de luz y atmósfera</span>
+                         </div>
+
+                         <div class="art3d-projects">
+                              <!-- Proyecto 01 · Escultura canina -->
+                              <article class="art3d-project art3d-project--light" data-aos="fade-up"
+                                   id="proyecto-escultura">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">01</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Estudio de Luz · Escultura</h3>
+                                             <p>Cuatro variaciones de iluminación sobre una escultura canina para
+                                                  estudiar volumen, materiales y temperatura de color.</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Cycles · Look Development</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel" data-bs-touch="true" id="lightCarousel1"
+                                        role="region" aria-label="Carrusel de iluminación de escultura canina">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Luz fría" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#lightCarousel1"
+                                                  type="button"></button>
+                                             <button aria-label="Luz neutra" data-bs-slide-to="1"
+                                                  data-bs-target="#lightCarousel1" type="button"></button>
+                                             <button aria-label="Luz cálida" data-bs-slide-to="2"
+                                                  data-bs-target="#lightCarousel1" type="button"></button>
+                                             <button aria-label="Luz ambiental" data-bs-slide-to="3"
+                                                  data-bs-target="#lightCarousel1" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/escultura-02.jpg" />
+                                                       <img alt="Escultura canina blanca iluminada con luz fría"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/escultura-02.jpg" />
+                                                       <span class="art3d-slide-caption">Luz fría</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/escultura-03.jpg" />
+                                                       <img alt="Escultura canina iluminada con luz neutra"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/escultura-03.jpg" />
+                                                       <span class="art3d-slide-caption">Luz neutra</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/escultura-01.jpg" />
+                                                       <img alt="Escultura canina iluminada con luz cálida"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/escultura-01.jpg" />
+                                                       <span class="art3d-slide-caption">Luz cálida</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/escultura-04.jpg" />
+                                                       <img alt="Escultura canina iluminada con luz ambiental"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/escultura-04.jpg" />
+                                                       <span class="art3d-slide-caption">Luz ambiental</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#lightCarousel1" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#lightCarousel1" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                              </article>
+
+                              <!-- Proyecto 02 · Moon -->
+                              <article class="art3d-project art3d-project--light art3d-project--portrait"
+                                   data-aos="fade-up" data-aos-delay="120" id="proyecto-Moon">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">02</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Iluminación Teatral · Moon</h3>
+                                             <p>Cuatro pruebas de luz escénica, contraluz y atmósfera sobre un personaje
+                                                  de estilo teatral.</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Stage Light · Cycles</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel art3d-carousel--portrait"
+                                        data-bs-touch="true" id="lightCarousel2" role="region"
+                                        aria-label="Carrusel de iluminación teatral del Moon">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Sombra violeta" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#lightCarousel2"
+                                                  type="button"></button>
+                                             <button aria-label="Luz dramática" data-bs-slide-to="1"
+                                                  data-bs-target="#lightCarousel2" type="button"></button>
+                                             <button aria-label="Atmósfera nocturna" data-bs-slide-to="2"
+                                                  data-bs-target="#lightCarousel2" type="button"></button>
+                                             <button aria-label="Contraluz" data-bs-slide-to="3"
+                                                  data-bs-target="#lightCarousel2" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/payaso-01.jpg" />
+                                                       <img alt="Moon 3D iluminado con sombra violeta"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/payaso-01.jpg" />
+                                                       <span class="art3d-slide-caption">Sombra violeta</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/payaso-02.jpg" />
+                                                       <img alt="Moon 3D iluminado con luz dramática"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/payaso-02.jpg" />
+                                                       <span class="art3d-slide-caption">Luz dramática</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/payaso-03.jpg" />
+                                                       <img alt="Moon 3D en atmósfera nocturna"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/payaso-03.jpg" />
+                                                       <span class="art3d-slide-caption">Atmósfera nocturna</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/payaso-04.jpg" />
+                                                       <img alt="Moon 3D en contraluz con fondo oscuro"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/payaso-04.jpg" />
+                                                       <span class="art3d-slide-caption">Contraluz</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#lightCarousel2" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#lightCarousel2" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                              </article>
+
+                              <!-- Proyecto 03 · Moon / Escena -->
+                              <article class="art3d-project art3d-project--light" data-aos="fade-up"
+                                   data-aos-delay="200" id="proyecto-Moon-escena">
+                                   <header class="art3d-project-head">
+                                        <span class="art3d-project-index">03</span>
+                                        <div class="art3d-project-copy">
+                                             <h3>Moon · Escena</h3>
+                                             <p>Dos composiciones horizontales del personaje para estudiar la relación
+                                                  entre figura, sombra y espacio escénico.</p>
+                                        </div>
+                                        <span class="art3d-project-tag">Stage Light · Cycles</span>
+                                   </header>
+                                   <div class="carousel slide art3d-carousel" data-bs-touch="true" id="lightCarousel3"
+                                        role="region" aria-label="Carrusel de escena horizontal del Moon">
+                                        <div class="carousel-indicators">
+                                             <button aria-current="true" aria-label="Luz azul" class="active"
+                                                  data-bs-slide-to="0" data-bs-target="#lightCarousel3"
+                                                  type="button"></button>
+                                             <button aria-label="Composición teatral" data-bs-slide-to="1"
+                                                  data-bs-target="#lightCarousel3" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/payaso-05.jpg" />
+                                                       <img alt="Moon 3D recostado en escena con luz azul"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/payaso-05.jpg" />
+                                                       <span class="art3d-slide-caption">Luz azul</span>
+                                                  </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                  <div class="art3d-slide art3d-slide--contain">
+                                                       <img alt="" aria-hidden="true" class="art3d-slide-bg"
+                                                            src="assets/img/3d/iluminacion/payaso-06.jpg" />
+                                                       <img alt="Moon 3D sentado en escena con luz violeta"
+                                                            class="art3d-slide-main" decoding="async" loading="lazy"
+                                                            src="assets/img/3d/iluminacion/payaso-06.jpg" />
+                                                       <span class="art3d-slide-caption">Composición teatral</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                             data-bs-target="#lightCarousel3" type="button">
+                                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                             <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button aria-label="Siguiente" class="carousel-control-next"
+                                             data-bs-slide="next" data-bs-target="#lightCarousel3" type="button">
+                                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                             <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                   </div>
+                              </article>
+                         </div>
+
+
+                    </div>
+               </div>
+          </section>
+          <!-- END: 3DSection -->
+     </main>
+     <!-- END: MainContent -->
+     <!-- BEGIN: MainFooter -->
+     <footer class="site-footer" data-purpose="site-footer">
+          <div class="footer-inner">
+               <div class="footer-brand">
+                    <span>Portafolio De Marisa</span>
+                    <span class="text-brand-pink text-sm"><i class="fa-solid fa-heart"></i></span>
+               </div>
+               <p class="text-xs text-gray-500">Se constante en lo que te gusta y quieres aprender. </p>
+               <div class="d-flex gap-4 text-gray-300">
+                    <a class="hover-text-brand-pink transition text-xs font-bold text-uppercase tracking-wider"
+                         href="index.html#hero">Volver Arriba ↑</a>
+               </div>
+          </div>
+     </footer>
+     <!-- END: MainFooter -->
+     <!-- BEGIN: InteractiveModal (Bootstrap Modal) -->
+     <div aria-hidden="true" class="modal fade art-modal" id="artModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                    <div class="modal-body position-relative">
+                         <!-- Close Button -->
+                         <button aria-label="Cerrar ventana" class="art-modal-close" onclick="closeArtModal()"
+                              type="button">
+                              <i class="fa-solid fa-xmark"></i>
+                         </button>
+                         <!-- Modal Content Header -->
+                         <h3 class="modal-title-pink" id="modalTitle">Título de la Obra</h3>
+                         <p class="modal-desc" id="modalDesc">Descripción detallada de la pieza.</p>
+                         <!-- Modal Image Container -->
+                         <div class="wireframe-box art-modal-image">
+                              <img alt="Detalle de la obra" class="w-100 h-100 object-contain" id="modalImage"
+                                   src="assets/img/3d/modelado/diorama-01.jpg" />
+                         </div>
+                         <div class="mt-6 d-flex justify-content-end">
+                              <button class="btn-pill-pink px-6 py-2 text-sm" onclick="closeArtModal()" type="button">
+                                   Cerrar Vista Previa
+                              </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- END: InteractiveModal -->
+     <!-- BEGIN: InteractiveScripts -->
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <!-- Librerias de animacion (locales) -->
+     <script src="assets/vendor/aos/aos.js"></script>
+     <script src="assets/vendor/anime/anime.min.js"></script>
+     <script src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
+     <script src="assets/vendor/canvas-confetti/confetti.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/particles/particles.min.js"></script>
+     <script src="js/main.js?v=20261025c"></script>
+     <!-- END: InteractiveScripts -->
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arte 2D Digital | Portafolio De Marisa</title>
+    <!-- Google Fonts: Pacifico / Shrikhand / Montserrat -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Pacifico&amp;family=Shrikhand&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Bootstrap 5 (local) + estilos propios -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/theme-init.js"></script>
+    <link href="css/styles.css?v=20261025i" rel="stylesheet" />
+    <!-- AOS (Animate On Scroll) -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Preloader (tiempo de espera) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-butterfly" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand-pink-light)"/><stop offset=".5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/></linearGradient>
+          <linearGradient id="pgB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--brand-pink-mid)"/></linearGradient>
+        </defs>
+        <g class="pg-wing pg-wing-l"><path d="M32 30 C18 8 2 10 6 26 C8 36 22 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C22 40 10 52 20 56 C30 60 34 46 33 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-wing pg-wing-r"><path d="M32 30 C46 8 62 10 58 26 C56 36 42 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C42 40 54 52 44 56 C34 60 30 46 31 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-body"><ellipse cx="32" cy="33" rx="2.3" ry="13" fill="#fff"/><path d="M31 21 C27 13 24 10 22 9" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M33 21 C37 13 40 10 42 9" stroke="#fff" stroke-width="1.4" fill="none"/><circle cx="22" cy="9" r="1.7" fill="#fff"/><circle cx="42" cy="9" r="1.7" fill="#fff"/></g>
+      </svg>
+      <div class="preloader-text">cargando...<span class="typed-cursor">|</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+    <!-- BEGIN: Decorative Palette Swatches (Fiel a los wireframes laterales) -->
+    <aside aria-hidden="true" class="side-palette-strip d-none d-lg-flex">
+        <div class="swatch-bar bg-brand-swatch1"></div>
+        <div class="swatch-bar bg-brand-swatch2"></div>
+        <div class="swatch-bar bg-brand-swatch3"></div>
+        <div class="swatch-bar bg-brand-swatch4"></div>
+        <div class="swatch-bar bg-brand-swatch5"></div>
+        <div class="swatch-bar bg-brand-swatch6"></div>
+    </aside>
+    <aside aria-hidden="true" class="side-palette-strip-right d-none d-lg-flex">
+        <div class="swatch-bar-right bg-brand-swatch1"></div>
+        <div class="swatch-bar-right bg-brand-swatch2"></div>
+        <div class="swatch-bar-right bg-brand-swatch3"></div>
+        <div class="swatch-bar-right bg-brand-swatch4"></div>
+        <div class="swatch-bar-right bg-brand-swatch5"></div>
+        <div class="swatch-bar-right bg-brand-swatch6"></div>
+    </aside>
+    <!-- END: Decorative Palette Swatches -->
+    <!-- BEGIN: MainHeader (Bootstrap Navbar) -->
+    <header class="site-header" data-purpose="main-navigation">
+        <div class="container-site header-inner">
+            <a class="mobile-logo font-title" href="index.html">Marisa</a>
+            <button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir Menú"
+                class="mobile-toggle d-md-none" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav aria-label="Navegación principal" class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audiovisual.html">Publicidad Audiovisual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tradicional.html">Arte tradicional</a></li>
+                    <li class="nav-item"><a aria-current="page" class="nav-link active" href="2d.html">Arte 2D
+                            Digital</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3d.html">3D</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item home-pill-item">
+                        <a class="nav-link home-pill" href="index.html"><i class="fa-solid fa-house text-xs"></i> Home
+                            Page</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END: MainHeader -->
+    <!-- BEGIN: MainContent -->
+    <main class="main-content">
+        <!-- BEGIN: Arte2DDigitalSection -->
+        <section class="section section-border" data-purpose="arte-2d-digital" id="digital2d">
+            <div class="container-site">
+                <!-- Top Wireframe Header as in Mockup 4 -->
+                <div class="wireframe-box title-frame-clean p-6 sm-p-10 lg-p-14 text-center mb-10 mb-sm-12">
+                    <div class="banner-badge banner-badge-wide position-relative z-10">
+                        <h2 class="banner-title banner-title--2d">ARTE 2D DIGITAL</h2>
+                        <div class="banner-rule w-48"></div>
+                        <p class="banner-note">FOTO • Ilustración Conceptual, composición, iluminación &amp; coloreado</p>
+                    </div>
+                </div>
+                <!-- 3 Category Buttons Pills -->
+                <div class="row g-4 mb-16">
+                    <div class="col-md-4">
+                        <div class="wireframe-box wireframe-cross p-6 text-center cursor-pointer group hover-scale-105 transition"
+                            onclick="document.getElementById('ilustracion-escenarios').scrollIntoView({behavior:'smooth'})">
+                            <span
+                                class="text-white-80 font-bold text-xs tracking-wider d-block mb-2 text-uppercase">FOTO</span>
+                            <div class="h-20 d-flex align-items-center justify-content-center">
+                                <i
+                                    class="fa-solid fa-mountain-sun text-4xl text-white group-hover-text-brand-pink transition"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-uppercase tracking-wider text-white">
+                                Ilustración Escenarios
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wireframe-box wireframe-cross p-6 text-center cursor-pointer group hover-scale-105 transition"
+                            onclick="document.getElementById('ilustracion-props').scrollIntoView({behavior:'smooth'})">
+                            <span
+                                class="text-white-80 font-bold text-xs tracking-wider d-block mb-2 text-uppercase">FOTO</span>
+                            <div class="h-20 d-flex align-items-center justify-content-center">
+                                <i
+                                    class="fa-solid fa-shield-halved text-4xl text-white group-hover-text-brand-pink transition"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-uppercase tracking-wider text-white">
+                                Ilustraciones Props
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wireframe-box wireframe-cross p-6 text-center cursor-pointer group hover-scale-105 transition"
+                            onclick="document.getElementById('ilustracion-personajes-2d').scrollIntoView({behavior:'smooth'})">
+                            <span
+                                class="text-white-80 font-bold text-xs tracking-wider d-block mb-2 text-uppercase">FOTO</span>
+                            <div class="h-20 d-flex align-items-center justify-content-center">
+                                <i
+                                    class="fa-solid fa-user-ninja text-4xl text-white group-hover-text-brand-pink transition"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-uppercase tracking-wider text-white">
+                                Ilustración Personajes
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1. Escenarios -->
+                <div class="mb-20" id="ilustracion-escenarios">
+                    <div class="pill-title pill-title-blue">Ilustración Escenarios</div>
+                    <div class="feature-line" data-aos="fade-up" data-aos-delay="80">
+                        <span class="feature-dot"></span>
+                        <span>Paisajes Digitales de la película Black Panther · Iluminación, atmósfera y coloreado</span>
+                    </div>
+                    <div class="art2d-duo art2d-duo--escenarios">
+                        <!-- Escenario 1 -->
+                        <div class="art2d-item" data-aos="zoom-in-up">
+                            <button aria-label="Ampliar ilustración: Ciudad de las Montañas"
+                                class="art2d-tile art2d-tile--landscape"
+                                data-art-desc="Dibujo digital de un valle brumoso con una ciudad fortaleza y montañas al fondo, inspirada en la peliícula de Black Panther 1."
+                                data-art-img="assets/img/arte-2d/escenario-01.png"
+                                data-art-title="Escena paisaje" type="button">
+                                <span class="art2d-media" data-tilt>
+                                    <img alt="Ilustración digital de una ciudad fortaleza entre montañas y niebla"
+                                        decoding="async" height="1080" loading="lazy"
+                                        src="assets/img/arte-2d/escenario-01.png" width="1920" />
+                                </span>
+                                <span class="art2d-caption">
+                                    <span class="art2d-caption-kicker">Escenario 01</span>
+                                    <span class="art2d-caption-title">Escena paisaje</span>
+                                </span>
+                                <span aria-hidden="true" class="art2d-expand"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                        </div>
+                        <!-- Escenario 2 -->
+                        <div class="art2d-item" data-aos="zoom-in-up" data-aos-delay="120">
+                            <button aria-label="Ampliar ilustración: Árbol Ancestral"
+                                class="art2d-tile art2d-tile--landscape"
+                                data-art-desc="Ilustración con ambiente nocturno: árbol ancestral, pantera y cielo violeta con partículas."
+                                data-art-img="assets/img/arte-2d/escenario-02.png" data-art-title="Árbol Ancestral"
+                                type="button">
+                                <span class="art2d-media" data-tilt>
+                                    <img alt="Ilustración digital de una sabana nocturna con un gran árbol y una pantera"
+                                        decoding="async" height="1080" loading="lazy"
+                                        src="assets/img/arte-2d/escenario-02.png" width="1920" />
+                                </span>
+                                <span class="art2d-caption">
+                                    <span class="art2d-caption-kicker">Escenario 02</span>
+                                    <span class="art2d-caption-title">Árbol Ancestral</span>
+                                </span>
+                                <span aria-hidden="true" class="art2d-expand"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. Props Grid -->
+                <div class="mb-20" id="ilustracion-props">
+                    <div class="pill-title pill-title-blue" data-aos="fade-right">Ilustración Props</div>
+                    <div class="feature-line" data-aos="fade-up" data-aos-delay="80">
+                        <span class="feature-dot"></span>
+                        <span>Diseño de Props · Volumen, materiales y paleta</span>
+                    </div>
+                    <div class="art2d-duo art2d-duo--props">
+                        <!-- Prop 1 -->
+                        <div class="art2d-item" data-aos="fade-up">
+                            <button aria-label="Ampliar ilustración: Calabaza Teiera"
+                                class="art2d-tile art2d-tile--prop"
+                                data-art-desc="Diseño de prop orgánico: calabaza transformada en tetera, con estudio de volumen y paleta otoñal."
+                                data-art-img="assets/img/arte-2d/prop-01.png" data-art-title="Calabaza Tetera"
+                                type="button">
+                                <span class="art2d-media" data-tilt>
+                                    <img alt="Ilustración digital de una calabaza naranja convertida en tetera"
+                                        decoding="async" height="2048" loading="lazy"
+                                        src="assets/img/arte-2d/prop-01.png" width="2048" />
+                                </span>
+                                <span class="art2d-caption">
+                                    <span class="art2d-caption-kicker">Prop 01</span>
+                                    <span class="art2d-caption-title">Calabaza Tetera</span>
+                                </span>
+                                <span aria-hidden="true" class="art2d-expand"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                        </div>
+                        <!-- Prop 2 -->
+                        <div class="art2d-item" data-aos="fade-up" data-aos-delay="120">
+                            <button aria-label="Ampliar ilustración: Tetera Marina" class="art2d-tile art2d-tile--prop"
+                                data-art-desc="Prop ilustrado: tetera rosa con conchas, estrella de mar y detalles de cristal."
+                                data-art-img="assets/img/arte-2d/prop-02.png" data-art-title="Tetera Marina"
+                                type="button">
+                                <span class="art2d-media" data-tilt>
+                                    <img alt="Ilustración digital de una tetera rosa con detalles marinos"
+                                        decoding="async" height="2048" loading="lazy"
+                                        src="assets/img/arte-2d/prop-02.png" width="2048" />
+                                </span>
+                                <span class="art2d-caption">
+                                    <span class="art2d-caption-kicker">Prop 02</span>
+                                    <span class="art2d-caption-title">Tetera Marina</span>
+                                </span>
+                                <span aria-hidden="true" class="art2d-expand"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. Personajes 2D (Gran Ilustración) -->
+                <div id="ilustracion-personajes-2d">
+                    <div class="pill-title pill-title-blue" data-aos="fade-right">Ilustraciones Personajes</div>
+                    <div class="feature-line" data-aos="fade-up" data-aos-delay="80">
+                        <span class="feature-dot"></span>
+                        <span>Splash Art &amp; Character Design · Estudio de poses y expresión</span>
+                    </div>
+                    <div class="art2d-personajes">
+                        <!-- Personaje principal -->
+                        <div class="art2d-item art2d-item--main" data-aos="fade-up">
+                            <button aria-label="Ampliar ilustración: Retrato Pop" class="art2d-tile art2d-tile--main"
+                                data-art-desc="Ilustración de personaje con acabado neón, paleta rosa y marco de interfaz retro."
+                                data-art-img="assets/img/arte-2d/personaje-principal.png" data-art-title="Retrato Pop"
+                                type="button">
+                                <span class="art2d-media" data-tilt>
+                                    <img alt="Ilustración digital de un personaje de pelo rosa dentro de una interfaz retro"
+                                        decoding="async" height="2343" loading="lazy"
+                                        src="assets/img/arte-2d/personaje-principal.png" width="1516" />
+                                </span>
+                                <span class="art2d-caption">
+                                    <span class="art2d-caption-kicker">Personaje principal</span>
+                                    <span class="art2d-caption-title">Retrato Pop</span>
+                                </span>
+                                <span aria-hidden="true" class="art2d-expand"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                        </div>
+                        <!-- Personaje vertical -->
+                        <div class="art2d-personaje-side">
+                            <div class="art2d-item" data-aos="fade-left" data-aos-delay="100">
+                                <button aria-label="Ampliar ilustración: Bosque de los Susurros"
+                                    class="art2d-tile art2d-tile--vertical art2d-tile--night"
+                                    data-art-desc="Ilustración vertical: una bruja y un niño avanzan por un bosque azul entre siluetas, inspirado de la canción Specter de Bad Omens."
+                                    data-art-img="assets/img/arte-2d/personaje-vertical-01.jpg"
+                                    data-art-title="Bosque de los Susurros" type="button">
+                                    <span class="art2d-media" data-tilt>
+                                        <img alt="Ilustración vertical de una bruja y un niño en un bosque azul"
+                                            decoding="async" height="1920" loading="lazy"
+                                            src="assets/img/arte-2d/personaje-vertical-01.jpg" width="1080" />
+                                    </span>
+                                    <span class="art2d-caption">
+                                        <span class="art2d-caption-kicker">Personaje 02</span>
+                                        <span class="art2d-caption-title">Bosque de los Susurros</span>
+                                    </span>
+                                    <span aria-hidden="true" class="art2d-expand"><i
+                                            class="fa-solid fa-expand"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proceso de personaje · Personaje Flor -->
+                    <div class="art2d-character-process" data-aos="fade-up">
+                        <header class="art2d-project-head">
+                            <div class="art2d-project-copy">
+                                <span class="art2d-caption-kicker">Character Design · Proceso</span>
+                                <h3>Personaje Flor</h3>
+                                <p>Seis etapas del diseño: bocetos, construcción del cuerpo, pruebas de color, arte
+                                    final y poses.</p>
+                            </div>
+                            <span class="art2d-project-tag">6 etapas</span>
+                        </header>
+                        <div class="carousel slide art2d-carousel" data-bs-touch="true" id="personajeFlorCarousel"
+                            role="region" aria-label="Carrusel del proceso de diseño del Personaje Flor">
+                            <div class="carousel-indicators">
+                                <button aria-current="true" aria-label="Bocetos: opciones" class="active"
+                                    data-bs-slide-to="0" data-bs-target="#personajeFlorCarousel" type="button"></button>
+                                <button aria-label="Bocetos: cuerpo" data-bs-slide-to="1"
+                                    data-bs-target="#personajeFlorCarousel" type="button"></button>
+                                <button aria-label="Pruebas de color" data-bs-slide-to="2"
+                                    data-bs-target="#personajeFlorCarousel" type="button"></button>
+                                <button aria-label="Personaje final" data-bs-slide-to="3"
+                                    data-bs-target="#personajeFlorCarousel" type="button"></button>
+                                <button aria-label="Poses: set 1" data-bs-slide-to="4"
+                                    data-bs-target="#personajeFlorCarousel" type="button"></button>
+                                <button aria-label="Poses: set 2" data-bs-slide-to="5"
+                                    data-bs-target="#personajeFlorCarousel" type="button"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="art2d-slide">
+                                        <img alt="Hoja de bocetos con tres opciones de personaje: labial, estrella y flor"
+                                            decoding="async" height="1080" loading="eager"
+                                            src="assets/img/arte-2d/personaje-flor/01-bocetos-opciones.png"
+                                            width="1920" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="art2d-slide">
+                                        <img alt="Bocetos de construcción del cuerpo del personaje flor"
+                                            decoding="async" height="1080" loading="eager"
+                                            src="assets/img/arte-2d/personaje-flor/02-bocetos-cuerpo.png"
+                                            width="1920" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="art2d-slide">
+                                        <img alt="Pruebas de color del personaje flor en distintas paletas"
+                                            decoding="async" height="1080" loading="eager"
+                                            src="assets/img/arte-2d/personaje-flor/03-pruebas-color.png" width="1920" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="art2d-slide">
+                                        <img alt="Personaje flor final con pétalos rosas y cuerpo verde"
+                                            decoding="async" height="1080" loading="eager"
+                                            src="assets/img/arte-2d/personaje-flor/04-personaje-final.png"
+                                            width="1920" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="art2d-slide">
+                                        <img alt="Tres poses del personaje flor con expresión alegre" decoding="async"
+                                            height="1080" loading="eager"
+                                            src="assets/img/arte-2d/personaje-flor/05-poses-01.png" width="1920" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="art2d-slide">
+                                        <img alt="Dos poses del personaje flor con estrellas y una flor"
+                                            decoding="async" height="1080" loading="eager"
+                                            src="assets/img/arte-2d/personaje-flor/06-poses-02.png" width="1920" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                data-bs-target="#personajeFlorCarousel" type="button">
+                                <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button aria-label="Siguiente" class="carousel-control-next" data-bs-slide="next"
+                                data-bs-target="#personajeFlorCarousel" type="button">
+                                <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Arte2DDigitalSection -->
+    </main>
+    <!-- END: MainContent -->
+    <!-- BEGIN: MainFooter -->
+    <footer class="site-footer" data-purpose="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span>Portafolio De Marisa</span>
+                <span class="text-brand-pink text-sm"><i class="fa-solid fa-heart"></i></span>
+            </div>
+            <p class="text-xs text-gray-500">El proceso es complicado pero el resultado vale totalmente la pena</p>
+            <div class="d-flex gap-4 text-gray-300">
+                <a class="hover-text-brand-pink transition text-xs font-bold text-uppercase tracking-wider"
+                    href="index.html#hero">Volver Arriba ↑</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END: MainFooter -->
+    <!-- BEGIN: InteractiveModal (Bootstrap Modal) -->
+    <div aria-hidden="true" class="modal fade art-modal" id="artModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body position-relative">
+                    <!-- Close Button -->
+                    <button aria-label="Cerrar ventana" class="art-modal-close" onclick="closeArtModal()" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <!-- Modal Content Header -->
+                    <h3 class="modal-title-pink" id="modalTitle">Título de la Obra</h3>
+                    <p class="modal-desc" id="modalDesc">Descripción detallada de la pieza.</p>
+                    <!-- Modal Image Container -->
+                    <div class="wireframe-box art-modal-image">
+                        <img alt="Detalle de la obra" class="w-100 h-100 object-contain" id="modalImage"
+                            src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" />
+                    </div>
+                    <div class="mt-6 d-flex justify-content-end">
+                        <button class="btn-pill-pink px-6 py-2 text-sm" onclick="closeArtModal()" type="button">
+                            Cerrar Vista Previa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: InteractiveModal -->
+    <!-- BEGIN: InteractiveScripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Librerias de animacion (locales) -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/anime/anime.min.js"></script>
+    <script src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
+    <script src="assets/vendor/canvas-confetti/confetti.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/particles/particles.min.js"></script>
+    <script src="js/main.js?v=20261025e"></script>
+    <!-- END: InteractiveScripts -->
+</body>
+
+</html>

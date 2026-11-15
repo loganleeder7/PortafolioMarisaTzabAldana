@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arte Tradicional | Portafolio De Marisa</title>
+    <!-- Google Fonts: Pacifico / Shrikhand / Montserrat -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Pacifico&amp;family=Shrikhand&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Primera lámina del carrusel -->
+    <link as="image" href="assets/img/tradicional/miradas.jpg" rel="preload" />
+    <!-- Bootstrap 5 (local) + estilos propios -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/theme-init.js"></script>
+    <link href="css/styles.css?v=20261025i" rel="stylesheet" />
+    <!-- AOS (Animate On Scroll) -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Preloader (tiempo de espera) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-butterfly" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand-pink-light)"/><stop offset=".5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/></linearGradient>
+          <linearGradient id="pgB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--brand-pink-mid)"/></linearGradient>
+        </defs>
+        <g class="pg-wing pg-wing-l"><path d="M32 30 C18 8 2 10 6 26 C8 36 22 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C22 40 10 52 20 56 C30 60 34 46 33 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-wing pg-wing-r"><path d="M32 30 C46 8 62 10 58 26 C56 36 42 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C42 40 54 52 44 56 C34 60 30 46 31 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-body"><ellipse cx="32" cy="33" rx="2.3" ry="13" fill="#fff"/><path d="M31 21 C27 13 24 10 22 9" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M33 21 C37 13 40 10 42 9" stroke="#fff" stroke-width="1.4" fill="none"/><circle cx="22" cy="9" r="1.7" fill="#fff"/><circle cx="42" cy="9" r="1.7" fill="#fff"/></g>
+      </svg>
+      <div class="preloader-text">cargando...<span class="typed-cursor">|</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+    <!-- BEGIN: Decorative Palette Swatches (Fiel a los wireframes laterales) -->
+    <aside aria-hidden="true" class="side-palette-strip d-none d-lg-flex">
+        <div class="swatch-bar bg-brand-swatch1"></div>
+        <div class="swatch-bar bg-brand-swatch2"></div>
+        <div class="swatch-bar bg-brand-swatch3"></div>
+        <div class="swatch-bar bg-brand-swatch4"></div>
+        <div class="swatch-bar bg-brand-swatch5"></div>
+        <div class="swatch-bar bg-brand-swatch6"></div>
+    </aside>
+    <aside aria-hidden="true" class="side-palette-strip-right d-none d-lg-flex">
+        <div class="swatch-bar-right bg-brand-swatch1"></div>
+        <div class="swatch-bar-right bg-brand-swatch2"></div>
+        <div class="swatch-bar-right bg-brand-swatch3"></div>
+        <div class="swatch-bar-right bg-brand-swatch4"></div>
+        <div class="swatch-bar-right bg-brand-swatch5"></div>
+        <div class="swatch-bar-right bg-brand-swatch6"></div>
+    </aside>
+    <!-- END: Decorative Palette Swatches -->
+    <!-- BEGIN: MainHeader (Bootstrap Navbar) -->
+    <header class="site-header" data-purpose="main-navigation">
+        <div class="container-site header-inner">
+            <a class="mobile-logo font-title" href="index.html">Marisa</a>
+            <button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir Menú"
+                class="mobile-toggle d-md-none" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav aria-label="Navegación principal" class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audiovisual.html">Publicidad Audiovisual</a></li>
+                    <li class="nav-item"><a aria-current="page" class="nav-link active" href="tradicional.html">Arte
+                            tradicional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="2d.html">Arte 2D Digital</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3d.html">3D</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item home-pill-item">
+                        <a class="nav-link home-pill" href="index.html"><i class="fa-solid fa-house text-xs"></i> Home
+                            Page</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END: MainHeader -->
+
+    <!-- BEGIN: MainContent -->
+    <main class="main-content">
+        <!-- BEGIN: ArteTradicionalSection -->
+        <section class="section section-border" data-purpose="arte-tradicional" id="tradicional">
+            <div class="container-site">
+
+                <!-- Header wireframe box with Black banner and Pink Text (boceto imagen 7) -->
+                <div class="wireframe-box title-frame-clean p-4 sm-p-8 lg-p-14 text-center mb-10 mb-sm-12">
+                    <div class="banner-badge">
+                        <h2 class="banner-title">ARTE TRADICIONAL</h2>
+                        <div class="banner-rule w-24 w-sm-36"></div>
+                        <p class="banner-note">Ilustraciones generales</p>
+                    </div>
+                </div>
+
+                <!-- 2 Filter Buttons with Cute Butterflies on Sides -->
+                <div class="d-flex flex-column flex-md-row flex-wrap align-items-center justify-content-center gap-4 gap-md-6 sm-gap-12 mb-12 mb-sm-16"
+                    data-aos="fade-up">
+                    <div class="d-flex align-items-center gap-2 gap-sm-3 w-130 w-md-auto justify-content-center">
+                        <span class="text-xl text-brand-pink floating-mini-butterfly d-none d-sm-inline-flex">
+                            🦋
+                        </span>
+                        <a class="btn-pill-blue px-5 px-sm-7 py-2 py-sm-3 text-sm text-base text-uppercase font-bold tracking-wider w-100 w-md-auto"
+                            href="#trad-personajes">Ilustraciones de Personajes</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 gap-sm-3 w-130 w-md-auto justify-content-center">
+                        <a class="btn-pill-blue px-5 px-sm-7 py-2 py-sm-3 text-sm text-base text-uppercase font-bold tracking-wider w-100 w-md-auto"
+                            href="#trad-props">Ilustraciones de Props</a>
+                        <span class="text-xl text-brand-pink floating-mini-butterfly d-none d-sm-inline-flex">
+                            🦋
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Subsección: Ilustraciones de Personajes Tradicionales -->
+                <div class="mb-16" id="trad-personajes">
+                    <div class="pill-title pill-title-pink pill-title-sm">Ilustraciones de Personajes</div>
+                    <div class="feature-line">
+                        <span class="feature-dot"></span>
+                        <span>Grafito · Expresión · Anatomía</span>
+                    </div>
+
+                    <div class="trad-gallery-shell" data-aos="zoom-in-up">
+                        <header class="trad-gallery-head">
+                            <div class="trad-gallery-copy">
+                                <span class="trad-kicker">Proyecto 1 · Láminas de estudio</span>
+                                <h3>Prácticas de Anatomía y Expresiones</h3>
+                                <p>Miradas, narices, labios, manos y pies: ejercicios de observación, estructura y
+                                    expresión a lápiz.</p>
+                            </div>
+                            <span class="trad-gallery-tag"><i aria-hidden="true" class="fa-solid fa-pencil"></i> 3
+                                láminas</span>
+                        </header>
+
+                        <div class="carousel slide trad-carousel" data-bs-ride="false" data-bs-touch="true"
+                            id="tradCarousel" role="region" aria-roledescription="carousel"
+                            aria-label="Carrusel de prácticas de anatomía y expresiones">
+                            <div class="carousel-indicators">
+                                <button aria-current="true" aria-label="Miradas y expresión" class="active"
+                                    data-bs-slide-to="0" data-bs-target="#tradCarousel" type="button"></button>
+                                <button aria-label="Narices y labios" data-bs-slide-to="1"
+                                    data-bs-target="#tradCarousel" type="button"></button>
+                                <button aria-label="Manos y pies" data-bs-slide-to="2" data-bs-target="#tradCarousel"
+                                    type="button"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="trad-slide">
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Miradas y expresión"
+                                            class="trad-slide-hit"
+                                            data-art-desc="Estudio de ojos y miradas: distintas formas, direcciones y expresiones resueltas con grafito."
+                                            data-art-img="assets/img/tradicional/miradas.jpg"
+                                            data-art-title="Miradas y expresión" type="button">
+                                            <img alt="Lámina de estudios de ojos y miradas a lápiz"
+                                                class="trad-slide-main" decoding="async" height="900" loading="eager"
+                                                src="assets/img/tradicional/miradas.jpg" width="1600" />
+                                            <span class="trad-slide-caption">01 · Miradas y expresión</span>
+                                            <span class="trad-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    lámina</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="trad-slide">
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Narices y labios"
+                                            class="trad-slide-hit"
+                                            data-art-desc="Estudios anatómicos de narices y labios con diferentes ángulos, volúmenes y expresiones."
+                                            data-art-img="assets/img/tradicional/narices-labios.jpg"
+                                            data-art-title="Narices y labios" type="button">
+                                            <img alt="Lámina de estudios de narices y labios a lápiz"
+                                                class="trad-slide-main" decoding="async" height="900" loading="eager"
+                                                src="assets/img/tradicional/narices-labios.jpg" width="1600" />
+                                            <span class="trad-slide-caption">02 · Narices y labios</span>
+                                            <span class="trad-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    lámina</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="trad-slide">
+                                        <button aria-haspopup="dialog" aria-label="Ampliar Manos y pies"
+                                            class="trad-slide-hit"
+                                            data-art-desc="Lámina de manos y pies en distintas poses: práctica de estructura, proporción y movimiento."
+                                            data-art-img="assets/img/tradicional/manos-pies.jpg"
+                                            data-art-title="Manos y pies" type="button">
+                                            <img alt="Lámina de estudios de manos y pies a lápiz"
+                                                class="trad-slide-main" decoding="async" height="900" loading="eager"
+                                                src="assets/img/tradicional/manos-pies.jpg" width="1600" />
+                                            <span class="trad-slide-caption">03 · Manos y pies</span>
+                                            <span class="trad-slide-expand"><i class="fa-solid fa-expand"></i><span>Ver
+                                                    lámina</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button aria-label="Anterior" class="carousel-control-prev" data-bs-slide="prev"
+                                data-bs-target="#tradCarousel" type="button">
+                                <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button aria-label="Siguiente" class="carousel-control-next" data-bs-slide="next"
+                                data-bs-target="#tradCarousel" type="button">
+                                <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Subsección: Diseño y exploración de rostros -->
+                    <div class="trad-props-shell mt-8" data-aos="zoom-in-up" data-aos-delay="80">
+                        <article class="trad-feature-card trad-feature-card--wide">
+                            <button aria-haspopup="dialog" aria-label="Ampliar Diseño y exploración de rostros"
+                                class="trad-feature-hit trad-feature-media"
+                                data-art-desc="Lámina de diseño y exploración de rostros: vistas frontales, perfiles y gestos trabajados en grafito."
+                                data-art-img="assets/img/tradicional/rostros.jpg"
+                                data-art-title="Diseño y exploración de rostros" type="button">
+                                <img alt="Lámina de diseño y exploración de rostros a lápiz" decoding="async"
+                                    height="900" loading="lazy" src="assets/img/tradicional/rostros.jpg" width="1600" />
+                                <span class="trad-feature-overlay"><i class="fa-solid fa-expand"></i> Ver lámina
+                                    completa</span>
+                            </button>
+                            <div class="trad-feature-meta trad-feature-meta--split">
+                                <div>
+                                    <span class="trad-kicker">Diseño de personajes</span>
+                                    <h3>Diseño y exploración de rostros</h3>
+                                </div>
+                                <p>Vistas frontales, perfiles y gestos: exploración de estructura, proporción y
+                                    expresión del rostro sobre papel.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Subsección: Ilustraciones de Props Tradicionales -->
+                <div id="trad-props">
+                    <div class="pill-title pill-title-pink pill-title-sm">Ilustraciones de Props</div>
+                    <div class="feature-line">
+                        <span class="feature-dot"></span>
+                        <span>Objetos cotidianos · Prácticas a lápiz</span>
+                    </div>
+
+                    <div class="trad-props-shell" data-aos="zoom-in-up" data-aos-delay="80">
+                        <article class="trad-feature-card trad-feature-card--wide">
+                            <button aria-haspopup="dialog" aria-label="Ampliar Prácticas y exploración de objetos"
+                                class="trad-feature-hit trad-feature-media"
+                                data-art-desc="Lámina de prácticas a lápiz: relojes, una motocicleta, teteras y una calabaza. Estudio de volumen, detalle y proporción."
+                                data-art-img="assets/img/tradicional/objetos-bocetos.jpg"
+                                data-art-title="Prácticas y exploración de objetos" type="button">
+                                <img alt="Lámina de bocetos de objetos cotidianos a lápiz" decoding="async" height="900"
+                                    loading="lazy" src="assets/img/tradicional/objetos-bocetos.jpg" width="1600" />
+                                <span class="trad-feature-overlay"><i class="fa-solid fa-expand"></i> Ver lámina
+                                    completa</span>
+                            </button>
+                            <div class="trad-feature-meta trad-feature-meta--split">
+                                <div>
+                                    <span class="trad-kicker">Prácticas a lápiz</span>
+                                    <h3>Prácticas y exploración de objetos</h3>
+                                </div>
+                                <p>Relojes con distintas formas como una motocicleta y teteras como la calaza: ejercicios de volumen, detalle, sombras y
+                                    proporción sobre papel.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- END: ArteTradicionalSection -->
+    </main>
+    <!-- END: MainContent -->
+
+    <!-- BEGIN: MainFooter -->
+    <footer class="site-footer" data-purpose="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span>Portafolio De Marisa</span>
+                <span class="text-brand-pink text-sm"><i class="fa-solid fa-heart"></i></span>
+            </div>
+            <p class="text-xs text-gray-500">No compitas con nadie, solo se tú</p>
+            <div class="d-flex gap-4 text-gray-300">
+                <a class="hover-text-brand-pink transition text-xs font-bold text-uppercase tracking-wider"
+                    href="index.html#hero">Volver Arriba ↑</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END: MainFooter -->
+
+    <!-- BEGIN: InteractiveModal (Bootstrap Modal) -->
+    <div aria-hidden="true" class="modal fade art-modal" id="artModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body position-relative">
+                    <!-- Close Button -->
+                    <button aria-label="Cerrar ventana" class="art-modal-close" onclick="closeArtModal()" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <!-- Modal Content Header -->
+                    <h3 class="modal-title-pink" id="modalTitle">Título de la Obra</h3>
+                    <p class="modal-desc" id="modalDesc">Descripción detallada de la pieza.</p>
+                    <!-- Modal Image Container -->
+                    <div class="wireframe-box art-modal-image">
+                        <img alt="Detalle de la obra" class="w-100 h-100 object-contain" id="modalImage"
+                            src="assets/img/tradicional/rostros.jpg" />
+                    </div>
+                    <div class="mt-6 d-flex justify-content-end">
+                        <button class="btn-pill-pink px-6 py-2 text-sm" onclick="closeArtModal()" type="button">
+                            Cerrar Vista Previa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: InteractiveModal -->
+
+    <!-- BEGIN: InteractiveScripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Librerias de animacion (locales) -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/anime/anime.min.js"></script>
+    <script src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
+    <script src="assets/vendor/canvas-confetti/confetti.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/particles/particles.min.js"></script>
+    <script src="js/main.js?v=20261025g"></script>
+    <!-- END: InteractiveScripts -->
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Portafolio De Marisa | Arte Digital, 3D &amp; Audiovisual</title>
+  <!-- Google Fonts: Pacifico / Shrikhand / Montserrat -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Pacifico&amp;family=Shrikhand&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap 5 (local) + estilos propios -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <script src="js/theme-init.js"></script>
+    <link href="css/styles.css?v=20261025i" rel="stylesheet" />
+  <!-- AOS (Animate On Scroll) -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Preloader (tiempo de espera) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-butterfly" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand-pink-light)"/><stop offset=".5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/></linearGradient>
+          <linearGradient id="pgB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--brand-pink-mid)"/></linearGradient>
+        </defs>
+        <g class="pg-wing pg-wing-l"><path d="M32 30 C18 8 2 10 6 26 C8 36 22 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C22 40 10 52 20 56 C30 60 34 46 33 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-wing pg-wing-r"><path d="M32 30 C46 8 62 10 58 26 C56 36 42 34 32 32 Z" fill="url(#pgA)"/><path d="M32 34 C42 40 54 52 44 56 C34 60 30 46 31 37 Z" fill="url(#pgB)"/></g>
+        <g class="pg-body"><ellipse cx="32" cy="33" rx="2.3" ry="13" fill="#fff"/><path d="M31 21 C27 13 24 10 22 9" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M33 21 C37 13 40 10 42 9" stroke="#fff" stroke-width="1.4" fill="none"/><circle cx="22" cy="9" r="1.7" fill="#fff"/><circle cx="42" cy="9" r="1.7" fill="#fff"/></g>
+      </svg>
+      <div class="preloader-text">cargando...<span class="typed-cursor">|</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+  <!-- BEGIN: Decorative Palette Swatches (Fiel a los wireframes laterales) -->
+  <aside aria-hidden="true" class="side-palette-strip d-none d-lg-flex">
+    <div class="swatch-bar bg-brand-swatch1"></div>
+    <div class="swatch-bar bg-brand-swatch2"></div>
+    <div class="swatch-bar bg-brand-swatch3"></div>
+    <div class="swatch-bar bg-brand-swatch4"></div>
+    <div class="swatch-bar bg-brand-swatch5"></div>
+    <div class="swatch-bar bg-brand-swatch6"></div>
+  </aside>
+  <aside aria-hidden="true" class="side-palette-strip-right d-none d-lg-flex">
+    <div class="swatch-bar-right bg-brand-swatch1"></div>
+    <div class="swatch-bar-right bg-brand-swatch2"></div>
+    <div class="swatch-bar-right bg-brand-swatch3"></div>
+    <div class="swatch-bar-right bg-brand-swatch4"></div>
+    <div class="swatch-bar-right bg-brand-swatch5"></div>
+    <div class="swatch-bar-right bg-brand-swatch6"></div>
+  </aside>
+  <!-- END: Decorative Palette Swatches -->
+  <!-- BEGIN: MainHeader (Bootstrap Navbar) -->
+  <header class="site-header" data-purpose="main-navigation">
+    <div class="container-site header-inner">
+      <a class="mobile-logo font-title" href="index.html">Marisa</a>
+      <button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir Menú" class="mobile-toggle d-md-none"
+        data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav aria-label="Navegación principal" class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="audiovisual.html">Publicidad Audiovisual</a></li>
+          <li class="nav-item"><a class="nav-link" href="tradicional.html">Arte tradicional</a></li>
+          <li class="nav-item"><a class="nav-link" href="2d.html">Arte 2D Digital</a></li>
+          <li class="nav-item"><a class="nav-link" href="3d.html">3D</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+          <li class="nav-item home-pill-item">
+            <a aria-current="page" class="nav-link home-pill active" href="index.html"><i
+                class="fa-solid fa-house text-xs"></i> Home Page</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+  <!-- BEGIN: MainContent -->
+  <main class="main-content">
+    <!-- BEGIN: HeroSection -->
+    <section class="section-hero" data-purpose="hero-section" id="hero">
+      <!-- Ambient Glow Behind Butterfly -->
+      <div class="hero-glow"></div>
+      <div class="container-site">
+        <div class="row g-8 align-items-center position-relative z-10">
+          <!-- Left: Huge Stylized Typographic Branding -->
+          <div
+            class="col-lg-7 text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start justify-content-center lg-pl-10">
+            <h1 class="hero-title">Portafolio</h1>
+            <p class="hero-subtitle">De Marisa</p>
+            <p class="hero-desc">Artista Digital, Modeladora 3D y Diseñadora Audiovisual. Creando universos visuales,
+              modelos y conceptos interactivos.</p>
+            <div class="hero-actions">
+              <a class="btn-pill-pink text-base" href="2d.html">
+                <i class="fa-solid fa-palette"></i> Explorar Trabajos
+              </a>
+              <a class="btn-pill-blue text-base bg-cta" href="contacto.html">
+                <i class="fa-regular fa-paper-plane"></i> Contactarme
+              </a>
+            </div>
+          </div>
+          <!-- Right: Elegant Vector Butterfly with Gentle Floating Animation -->
+          <div class="col-lg-5 d-flex justify-content-center align-items-center position-relative mt-10 mt-lg-0">
+            <div class="position-relative w-64 sm-w-80 md-w-440 animate-butterfly">
+              <svg aria-hidden="true" class="w-100 h-auto drop-shadow-2xl" fill="none" viewbox="0 0 500 500"
+                xmlns="http://www.w3.org/2000/svg">
+                <!-- Butterfly Upper Wing -->
+                <path
+                  d="M220 250 C 230 180, 290 80, 420 70 C 470 66, 485 110, 440 160 C 400 205, 430 250, 395 300 C 370 335, 300 300, 240 260 Z"
+                  fill="var(--brand-pink)" fill-opacity="0.95"></path>
+                <!-- Wing Inner Patterns / Glow details -->
+                <path d="M260 230 C 290 160, 340 110, 420 100 C 390 150, 370 200, 320 230 Z" fill="var(--brand-pink-light)"
+                  fill-opacity="0.75"></path>
+                <circle cx="410" cy="190" fill="#ffffff" fill-opacity="0.8" r="14"></circle>
+                <circle cx="390" cy="225" fill="#ffffff" fill-opacity="0.8" r="9"></circle>
+                <circle cx="360" cy="255" fill="#ffffff" fill-opacity="0.7" r="7"></circle>
+                <!-- Lower Wing -->
+                <path d="M230 260 C 280 290, 370 350, 350 420 C 330 480, 280 430, 270 380 C 260 340, 230 310, 225 270 Z"
+                  fill="var(--brand-pink-mid)" fill-opacity="0.92"></path>
+                <path d="M245 285 C 280 320, 330 370, 315 410 C 295 380, 270 340, 245 285 Z" fill="var(--brand-pink-light)"
+                  fill-opacity="0.6"></path>
+                <!-- Butterfly Body & Antennae -->
+                <path
+                  d="M220 230 C 223 200, 215 170, 205 160 C 202 156, 195 160, 198 168 C 205 185, 210 210, 212 235 C 208 260, 210 300, 225 350 C 228 355, 234 350, 232 342 C 225 310, 222 270, 220 230 Z"
+                  fill="#ffffff"></path>
+                <path d="M210 170 Q 195 140 185 135" fill="none" stroke="#ffffff" stroke-linecap="round"
+                  stroke-width="3"></path>
+                <path d="M213 165 Q 215 135 225 125" fill="none" stroke="#ffffff" stroke-linecap="round"
+                  stroke-width="2.5"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: SobreMiSection -->
+    <section class="section" data-purpose="about-me-section" id="sobre-mi">
+      <div class="container-narrow">
+        <!-- Scalloped Card Wrapper -->
+        <div class="scalloped-container p-5 sm-p-10 lg-p-12 text-slate-900">
+          <div class="row g-10 align-items-center">
+            <!-- Left Column: Photo Frame with Side Badges & CV Download -->
+            <div class="col-lg-5 d-flex flex-column align-items-center">
+              <div class="section-heading mb-4">
+                <h2>Sobre Mí</h2>
+              </div>
+              <div class="d-flex align-items-center justify-content-center gap-2 gap-sm-3 w-100 mw-sm flex-wrap">
+                <!-- Side Thumbnail / Category Indicators (boceto imagen 2) -->
+                <div class="d-flex flex-column gap-2 gap-sm-3">
+                  <div class="photo-side-icon"><i class="fa-solid fa-camera"></i></div>
+                  <div class="photo-side-icon"><i class="fa-solid fa-paint-brush"></i></div>
+                  <div class="photo-side-icon"><i class="fa-solid fa-cube"></i></div>
+                  <div class="photo-side-icon"><i class="fa-solid fa-film"></i></div>
+                  <div class="photo-side-icon"><i class="fa-solid fa-shapes"></i></div>
+                </div>
+                <!-- Main Photo Box -->
+                <div class="photo-frame">
+                  <div class="photo-frame-inner">
+                    <img src="assets/image/MiFoto.jpeg" alt="Mi foto" width="200" class="clip-reveal" />
+                    <span class="text-xs text-brand-pinkLight mt-1">Marisa • Visual Artist</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CV Download Button Pill -->
+              <div class="mt-6 w-100 d-flex justify-content-center">
+                <a class="btn-pill-pink px-8 py-2.5 text-sm shadow-md hover-scale-105" href="assets/docs/cv.pdf" target="_blank" rel="noopener">
+                  <i class="fa-solid fa-file-arrow-down"></i>
+                  CV (pdf)
+                </a>
+              </div>
+            </div>
+            <!-- Right Column: Bio Narrative & Software Skills -->
+            <div class="col-lg-7 d-flex flex-column justify-content-center space-y-6 mt-8 mt-lg-0">
+              <!-- Biography as infographic -->
+              <div class="bio-card">
+                <div class="about-title">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Ingeniera en Animación Digital y Efectos Visuales</span>
+                </div>
+                <div class="about-grid">
+                  <div class="about-tile">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>Modelado 3D<br/>escenarios, edificios y objetos</span>
+                  </div>
+                  <div class="about-tile">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Animatics</span>
+                  </div>
+                  <div class="about-tile">
+                    <i class="fa-solid fa-person-running"></i>
+                    <span>Animación<br/>3D / 2D</span>
+                  </div>
+                  <div class="about-tile">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <span>Coloreado<br/>digital</span>
+                  </div>
+                  <div class="about-tile">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Arte<br/>conceptual</span>
+                  </div>
+                  <div class="about-tile">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Preproducción<br/>e integración</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Software Skills List -->
+              <div class="skills-card">
+                <h3>Software - Skills</h3>
+                <div class="space-y-3 font-semibold text-slate-800 text-sm sm-text-base">
+                  <!-- Skill 1 -->
+                  <div class="skill-row">
+                    <span class="skill-label"><i class="fa-solid fa-image text-red-600"></i> FireAlpaca
+                      Animaciones y dibujo 2D </span>
+                    <div class="skill-track">
+                      <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <!-- Skill 2 -->
+                  <div class="skill-row">
+                    <span class="skill-label"><i class="fa-solid fa-cube text-orange-500"></i> Blender
+                      (Modelado, UVs &amp; Animaciones)</span>
+                    <div class="skill-track">
+                      <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <!-- Skill 3 -->
+
+                  <!-- Skill 4 -->
+                  <div class="skill-row">
+                    <span class="skill-label"><i class="fa-solid fa-clapperboard text-blue-600"></i>Arte Tradicional
+                      (Lápiz)</span>
+                    <div class="skill-track">
+                      <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <!-- Skill 5 -->
+                  <div class="skill-row">
+                    <span class="skill-label"><i class="fa-solid fa-paintbrush text-amber-600"></i>Adobe Photoshop (Edición, Collages &amp; Composiciones)</span>
+                    <div class="skill-track">
+                      <div class="skill-fill" style="width: 60%"></div>
+                    </div>
+                  </div>
+                  <!-- Skill 6 -->
+                  <div class="skill-row">
+                    <span class="skill-label"><i class="fa-solid fa-palette text-emerald-600"></i> Adobe After Effects (Comerciales, Motion Graphics &amp; Doodle Animation) </span>
+                    <div class="skill-track">
+                      <div class="skill-fill" style="width: 50%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- END: SobreMiSection -->
+  </main>
+  <!-- END: MainContent -->
+  <!-- BEGIN: MainFooter -->
+  <footer class="site-footer" data-purpose="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>Portafolio De Marisa</span>
+        <span class="text-brand-pink text-sm"><i class="fa-solid fa-heart"></i></span>
+      </div>
+      <p class="text-xs text-gray-500">Haz Arte y ama lo que haces</p>
+      <div class="d-flex gap-4 text-gray-300">
+        <a class="hover-text-brand-pink transition text-xs font-bold text-uppercase tracking-wider" href="#hero">Volver
+          Arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+  <!-- END: MainFooter -->
+  <!-- BEGIN: InteractiveModal (Bootstrap Modal) -->
+  <div aria-hidden="true" class="modal fade art-modal" id="artModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body position-relative">
+          <!-- Close Button -->
+          <button aria-label="Cerrar ventana" class="art-modal-close" onclick="closeArtModal()" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <!-- Modal Content Header -->
+          <h3 class="modal-title-pink" id="modalTitle">Título de la Obra</h3>
+          <p class="modal-desc" id="modalDesc">Descripción detallada de la pieza.</p>
+          <!-- Modal Image Container -->
+          <div class="wireframe-box art-modal-image">
+            <img alt="Detalle de la obra" class="w-100 h-100 object-contain" id="modalImage"
+              src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" />
+          </div>
+          <div class="mt-6 d-flex justify-content-end">
+            <button class="btn-pill-pink px-6 py-2 text-sm" onclick="closeArtModal()" type="button">
+              Cerrar Vista Previa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: InteractiveModal -->
+  <!-- BEGIN: InteractiveScripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Librerias de animacion (locales) -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/anime/anime.min.js"></script>
+  <script src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
+  <script src="assets/vendor/canvas-confetti/confetti.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/particles/particles.min.js"></script>
+  <script src="js/main.js"></script>
+  <!-- END: InteractiveScripts -->
+</body>
+
+</html>
