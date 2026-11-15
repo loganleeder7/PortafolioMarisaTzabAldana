@@ -291,15 +291,13 @@ function initThemeSwitcher() {
   function applyTheme(idx) {
     const t = themes[idx];
     if (!t) return;
-    const root = document.documentElement;
-    root.style.setProperty('--brand-pink', t.pink);
-    root.style.setProperty('--brand-pink-light', t.light);
-    root.style.setProperty('--brand-pink-mid', t.mid);
-    root.style.setProperty('--brand-pink-dark', t.dark);
-    root.style.setProperty('--brand-pink-sobremi', t.sobremi);
-    root.style.setProperty('--brand-pink-rgb', hexToRgb(t.pink));
-    root.style.setProperty('--brand-on-pink', isLight(t.pink) ? '#1a1a1a' : '#ffffff');
-    root.style.setProperty('--brand-pill-text', isPillLight(t.pink) ? '#0f172a' : '#ffffff');
+     const root = document.documentElement;
+    root.style.setProperty('--bf-pink', t.pink);
+    root.style.setProperty('--bf-pink-light', t.light);
+    root.style.setProperty('--bf-pink-mid', t.mid);
+    root.style.setProperty('--bf-pink-dark', t.dark);
+    root.style.setProperty('--bf-pink-sobremi', t.sobremi);
+    root.style.setProperty('--bf-pink-rgb', hexToRgb(t.pink));
     localStorage.setItem('theme-index', String(idx));
     swatches.forEach((el) => {
       el.classList.toggle('is-active', Number(el.dataset.theme) === idx);
@@ -452,10 +450,10 @@ function initButterflyCursor() {
     '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">' +
     '<defs>' +
     '<linearGradient id="bfA" x1="0" y1="0" x2="1" y2="1">' +
-    '<stop offset="0" stop-color="var(--brand-pink-light)"/><stop offset=".5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/>' +
+    '<stop offset="0" stop-color="var(--bf-pink-light)"/><stop offset=".5" stop-color="var(--bf-pink)"/><stop offset="1" stop-color="var(--brand-blue-light)"/>' +
     '</linearGradient>' +
     '<linearGradient id="bfB" x1="1" y1="0" x2="0" y2="1">' +
-    '<stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--brand-pink-mid)"/>' +
+    '<stop offset="0" stop-color="var(--brand-blue-muted)"/><stop offset="1" stop-color="var(--bf-pink-mid)"/>' +
     '</linearGradient>' +
     '</defs>' +
     '<g class="bf-wing bf-wing-l">' +

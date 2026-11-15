@@ -33,15 +33,13 @@
     if (i === null) return;
     var t = themes[Number(i)];
     if (!t) return;
-    var r = document.documentElement.style;
-    r.setProperty('--brand-pink', t.pink);
-    r.setProperty('--brand-pink-light', t.light);
-    r.setProperty('--brand-pink-mid', t.mid);
-    r.setProperty('--brand-pink-dark', t.dark);
-    r.setProperty('--brand-pink-sobremi', t.sobremi);
-    r.setProperty('--brand-pink-rgb', hexToRgb(t.pink));
-    r.setProperty('--brand-on-pink', isLight(t.pink) ? '#1a1a1a' : '#ffffff');
-    r.setProperty('--brand-pill-text', isPillLight(t.pink) ? '#0f172a' : '#ffffff');
+     var r = document.documentElement.style;
+    r.setProperty('--bf-pink', t.pink);
+    r.setProperty('--bf-pink-light', t.light);
+    r.setProperty('--bf-pink-mid', t.mid);
+    r.setProperty('--bf-pink-dark', t.dark);
+    r.setProperty('--bf-pink-sobremi', t.sobremi);
+    r.setProperty('--bf-pink-rgb', hexToRgb(t.pink));
   } catch (e) {}
 })();
 
