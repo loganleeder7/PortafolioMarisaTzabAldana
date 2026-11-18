@@ -3888,3 +3888,37 @@ html.has-butterfly-cursor [contenteditable="true"] { cursor: text !important; }
   .w-24, .w-36, .w-40, .w-44, .w-48, .w-56, .w-64, .w-72, .w-96 { max-width: 85% !important; }
 }
 
+/* nav-open: ocultar paleta inferior mientras el menu esta desplegado */
+body.nav-open .side-palette-strip,
+body.nav-open .side-palette-strip-right { display: none !important; }
+body.nav-open { padding-bottom: 0 !important; }
+
+@media (max-width: 410px) {
+  .mobile-toggle { position: relative; z-index: 1045; }
+  .site-header .navbar-collapse.show {
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  /* foto y titulo "Ingeniera..." en reloj */
+  .photo-frame {
+    max-width: 100%;
+    height: auto;
+    min-height: 11rem;
+    padding: 0.5rem;
+  }
+  .photo-frame-inner { padding: 0.6rem; }
+  .photo-frame img { width: 100%; max-width: 150px; height: auto; }
+  .photo-side-icon { width: 1.5rem; height: 1.5rem; font-size: 0.65rem; }
+  .about-title { font-size: 0.75rem; padding: 0.45rem 0.6rem; gap: 0.35rem; }
+  .about-title i { font-size: 0.9rem; }
+  .about-title span { line-height: 1.2; }
+  .scalloped-container { padding: 0.7rem; }
+  .bio-card, .skills-card { padding: 0.6rem; }
+}
+@media (max-width: 240px) {
+  .photo-frame img { max-width: 120px; }
+  .about-title { font-size: 0.7rem; }
+  .photo-side-icon { width: 1.35rem; height: 1.35rem; font-size: 0.6rem; }
+}

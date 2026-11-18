@@ -1,5 +1,12 @@
 
 
+// --- Menu mobil: ocultar paleta inferior mientras esta abierto ----------------
+const mainNavEl = document.getElementById('mainNav');
+if (mainNavEl) {
+  mainNavEl.addEventListener('show.bs.collapse', () => document.body.classList.add('nav-open'));
+  mainNavEl.addEventListener('hidden.bs.collapse', () => document.body.classList.remove('nav-open'));
+}
+
 // --- Modal de obras (Bootstrap Modal) ---------------------------------------
 const artModalEl = document.getElementById('artModal');
 const artModal = artModalEl ? bootstrap.Modal.getOrCreateInstance(artModalEl) : null;
