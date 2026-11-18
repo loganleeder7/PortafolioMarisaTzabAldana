@@ -3911,14 +3911,31 @@ body.nav-open { padding-bottom: 0 !important; }
   .photo-frame-inner { padding: 0.6rem; }
   .photo-frame img { width: 100%; max-width: 150px; height: auto; }
   .photo-side-icon { width: 1.5rem; height: 1.5rem; font-size: 0.65rem; }
-  .about-title { font-size: 0.75rem; padding: 0.45rem 0.6rem; gap: 0.35rem; }
-  .about-title i { font-size: 0.9rem; }
-  .about-title span { line-height: 1.2; }
+  .about-title {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
+    gap: 0.3rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .about-title i { font-size: 0.85rem; }
+  .about-title span {
+    display: block;
+    width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.25;
+  }
   .scalloped-container { padding: 0.7rem; }
   .bio-card, .skills-card { padding: 0.6rem; }
 }
 @media (max-width: 240px) {
   .photo-frame img { max-width: 120px; }
-  .about-title { font-size: 0.7rem; }
+  .about-title { font-size: 0.65rem; padding: 0.35rem 0.45rem; }
   .photo-side-icon { width: 1.35rem; height: 1.35rem; font-size: 0.6rem; }
 }
